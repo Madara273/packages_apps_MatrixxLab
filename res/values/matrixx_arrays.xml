@@ -1085,14 +1085,14 @@
         <item>github</item>
     </string-array>
 
-    <!-- Clock Color -->
-   <string-array name="clock_color_mode_entries">
-        <item>Default</item>
-        <item>Accent</item>
-        <item>Custom</item>
+    <!-- Custom clock style -->
+    <string-array name="lockscreen_custom_clock_color_mode_entries" translatable="false">
+        <item>@string/default_value</item>
+        <item>@string/accent_color</item>
+        <item>@string/custom_color</item>
     </string-array>
 
-    <string-array name="clock_color_mode_values">
+    <string-array name="lockscreen_custom_clock_color_mode_values" translatable="false">
         <item>default</item>
         <item>accent</item>
         <item>custom</item>
@@ -1173,4 +1173,5 @@
         <item>com.google.android.apps.pixel.agent</item>
         <item>com.google.android.apps.pixel.creativeassistant</item>
     </string-array>
+
 </resources>
