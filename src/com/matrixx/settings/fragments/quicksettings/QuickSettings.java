@@ -69,12 +69,16 @@ public class QuickSettings extends SettingsPreferenceFragment implements
     private static final String KEY_QS_TILE_STYLE_MINIMAL_INVERT = "qs_tile_style_minimal_invert";
     private static final String KEY_QS_USE_MODIFIED_TILE_SPACING = "qs_use_modified_tile_spacing";
     private static final String KEY_QS_TILE_SHAPE = "qs_tile_shape";
+    private static final String KEY_BRIGHTNESS_SLIDER_STYLE = "qs_brightness_slider_style";
+    private static final String KEY_BRIGHTNESS_SLIDER_SHAPE = "qs_brightness_slider_shape";
 
     private Preference mQsCompactPlayer;
     private ListPreference mShowBrightnessSlider;
     private ListPreference mBrightnessSliderPosition;
     private SwitchPreferenceCompat mBrightnessSliderHaptic;
     private SwitchPreferenceCompat mShowAutoBrightness;
+    private SystemSettingSwitchPreference mBrightnessSliderStyle;
+    private SystemSettingListPreference mBrightnessSliderShape;
     private SwitchPreferenceCompat mSingleQsTone;
     private Preference mDualTargetTileStyle;
     private SwitchPreferenceCompat mQsTileAlternateColor;
@@ -132,6 +136,14 @@ public class QuickSettings extends SettingsPreferenceFragment implements
             updateMinimalStyleDependencies();
         }
 
+        mBrightnessSliderStyle = findPreference(KEY_BRIGHTNESS_SLIDER_STYLE);
+        mBrightnessSliderShape = findPreference(KEY_BRIGHTNESS_SLIDER_SHAPE);
+
+        if (mBrightnessSliderStyle != null) {
+            mBrightnessSliderStyle.setOnPreferenceChangeListener(this);
+            updateBrightnessSliderStyleDependencies();
+        }
+
         mBrightnessSliderHaptic = findPreference(KEY_BRIGHTNESS_SLIDER_HAPTIC);
         boolean hapticAvailable = DeviceUtils.hasVibrator(context);
 
@@ -171,6 +183,26 @@ public class QuickSettings extends SettingsPreferenceFragment implements
         }
     }
 
+    private void updateBrightnessSliderStyleDependencies() {
+        if (mBrightnessSliderStyle == null) return;
+
+        ContentResolver resolver = getContext().getContentResolver();
+        boolean isSliderStyleEnabled = Settings.System.getInt(resolver,
+                KEY_BRIGHTNESS_SLIDER_STYLE, 0) == 1;
+
+        if (mBrightnessSliderShape != null) {
+            mBrightnessSliderShape.setVisible(!isSliderStyleEnabled);
+        }
+
+        if (mShowAutoBrightness != null) {
+            boolean automaticAvailable = getContext().getResources().getBoolean(
+                    com.android.internal.R.bool.config_automatic_brightness_available);
+            if (automaticAvailable) {
+                mShowAutoBrightness.setVisible(!isSliderStyleEnabled);
+            }
+        }
+    }
+
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         ContentResolver resolver = getContext().getContentResolver();
@@ -182,6 +214,7 @@ public class QuickSettings extends SettingsPreferenceFragment implements
                 mBrightnessSliderHaptic.setEnabled(value > 0);
             if (mShowAutoBrightness != null)
                 mShowAutoBrightness.setEnabled(value > 0);
+            updateBrightnessSliderStyleDependencies();
             return true;
         } else if (preference == mSingleQsTone) {
             SystemUtils.showSystemUiRestartDialog(getActivity());
@@ -200,6 +233,10 @@ public class QuickSettings extends SettingsPreferenceFragment implements
             return true;
         } else if (preference == mQsTileStyleMinimal) {
             updateMinimalStyleDependencies();
+            SystemUtils.showSystemUiRestartDialog(getActivity());
+            return true;
+        } else if (preference == mBrightnessSliderStyle) {
+            updateBrightnessSliderStyleDependencies();
             SystemUtils.showSystemUiRestartDialog(getActivity());
             return true;
         }
@@ -255,6 +292,14 @@ public class QuickSettings extends SettingsPreferenceFragment implements
                     
                     if (isMinimalEnabled) {
                         keys.add(KEY_QS_TILE_SHAPE);
+                    }
+
+                    boolean isSliderStyleEnabled = Settings.System.getInt(resolver,
+                            KEY_BRIGHTNESS_SLIDER_STYLE, 0) == 1;
+                    
+                    if (isSliderStyleEnabled) {
+                        keys.add(KEY_BRIGHTNESS_SLIDER_SHAPE);
+                        keys.add(KEY_SHOW_AUTO_BRIGHTNESS);
                     }
 
                     return keys;

@@ -72,6 +72,12 @@
     <PreferenceCategory
          android:title="@string/qs_brightness_slider_category">
 
+        <com.matrixx.settings.preferences.SystemSettingSwitchPreference
+            android:key="qs_brightness_slider_style"
+            android:title="@string/qs_brightness_slider_style_title"
+            android:summary="@string/qs_brightness_slider_style_summary"
+            android:defaultValue="false" />
+
         <lineageos.preference.LineageSecureSettingListPreference
             android:key="qs_show_brightness_slider"
             android:title="@string/qs_show_brightness_slider_title"
