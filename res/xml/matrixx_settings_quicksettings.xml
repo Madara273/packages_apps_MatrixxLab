@@ -142,6 +142,23 @@
         android:key="qs_layout_category"
         android:title="@string/quick_settings_layout_category_title">
 
+        <com.matrixx.settings.preferences.SystemSettingListPreference
+            android:key="qs_panel_style"
+            android:title="@string/qs_panel_style_title"
+            android:entries="@array/qs_panel_style_entries"
+            android:entryValues="@array/qs_panel_style_values"
+            android:defaultValue="0" />
+
+        <com.matrixx.settings.preferences.QSTileIconShapePreference
+            android:key="qs_tile_icon_shape"
+            android:title="@string/quick_settings_tile_shape_title" />
+
+        <com.matrixx.settings.preferences.SystemSettingSwitchPreference
+            android:key="qs_tile_label_hide"
+            android:title="@string/qs_tile_label_hide_title"
+            android:summary="@string/qs_tile_label_hide_summary"
+            android:defaultValue="false" />
+
         <com.matrixx.settings.preferences.SystemSettingSwitchPreference
             android:key="qs_tile_style_minimal"
             android:title="@string/qs_tile_style_minimal_title"
