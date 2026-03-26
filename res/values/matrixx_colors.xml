@@ -27,4 +27,8 @@
 
     <!-- Status bar/ClockChip -->
     <color name="option_border_default">#5f6368</color>
+    <color name="font_drop_down_bg_light">@*android:color/system_surface_bright_light</color>
+    <color name="font_drop_down_bg_dark">@*android:color/system_surface_bright_dark</color>
+    <color name="op_control_text_color_secondary">@color/op_control_text_color_secondary_light</color>
+    <color name="op_control_text_color_secondary_light">#66000000</color>
 </resources>
