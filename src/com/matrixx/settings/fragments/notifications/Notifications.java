@@ -30,6 +30,8 @@ import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settingslib.search.SearchIndexable;
 
+import com.matrixx.settings.preferences.CustomSeekBarPreference;
+
 import java.util.List;
 
 @SearchIndexable
@@ -41,9 +43,11 @@ public class Notifications extends SettingsPreferenceFragment implements
     private static final String BATTERY_LIGHTS_PREF = "battery_lights";
     private static final String NOTIFICATION_LIGHTS_PREF = "notification_lights";
     private static final String LIGHT_BRIGHTNESS_CATEGORY = "light_brightness";
+    private static final String HEADS_UP_TIMEOUT_PREF = "heads_up_timeout";
 
     private Preference mBatteryLights;
     private Preference mNotificationLights;
+    private CustomSeekBarPreference mHeadsUpTimeOut;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -54,6 +58,10 @@ public class Notifications extends SettingsPreferenceFragment implements
         final PreferenceScreen prefScreen = getPreferenceScreen();
         final Context context = getActivity();
         final Resources res = context.getResources();
+
+        mHeadsUpTimeOut = (CustomSeekBarPreference)
+                            prefScreen.findPreference(HEADS_UP_TIMEOUT_PREF);
+        mHeadsUpTimeOut.setDefaultValue(getDefaultDecay(getContext()));
 
         // Battery Lights
         mBatteryLights = prefScreen.findPreference(BATTERY_LIGHTS_PREF);
@@ -81,6 +89,18 @@ public class Notifications extends SettingsPreferenceFragment implements
                 prefScreen.removePreference(lightsCategory);
             }
         }
+    }
+
+    private static int getDefaultDecay(Context context) {
+        int defaultHeadsUpTimeOut = 5;
+        Resources systemUiResources;
+        try {
+            systemUiResources = context.getPackageManager().getResourcesForApplication("com.android.systemui");
+            defaultHeadsUpTimeOut = systemUiResources.getInteger(systemUiResources.getIdentifier(
+                    "com.android.systemui:integer/heads_up_notification_decay", null, null)) / 1000;
+        } catch (Exception e) {
+        }
+        return defaultHeadsUpTimeOut;
     }
 
     @Override
