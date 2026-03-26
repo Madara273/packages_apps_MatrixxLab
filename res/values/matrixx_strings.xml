@@ -1284,4 +1284,15 @@
     <string name="cutout_progress_music_clockwise_title">Clockwise Direction</string>
     <string name="cutout_progress_music_aod_title">Show on AOD</string>
     <string name="cutout_progress_music_aod_summary">Keep music ring visible on the Ambient Display</string>
+
+    <!-- Status bar - Battery -->
+    <string name="status_bar_battery_style_title">Battery style</string>
+    <string name="status_bar_battery_style_icon_rlandscape">Icon landscape (Right)</string>
+    <string name="status_bar_battery_style_circle">Circle</string>
+    <string name="status_bar_battery_style_dotted_circle">Dotted circle</string>
+    <string name="status_bar_battery_style_text">Text</string>
+    <string name="status_bar_battery_percent_title">Battery percent</string>
+    <string name="status_bar_battery_percent_hidden">Hidden</string>
+    <string name="status_bar_battery_percent_text_inside">Inside the icon</string>
+    <string name="status_bar_battery_percent_text_next">Next to the icon</string>
 </resources>
