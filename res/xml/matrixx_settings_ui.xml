@@ -38,6 +38,13 @@
             android:summary="@string/monet_settings_summary"
             android:fragment="com.matrixx.settings.fragments.ui.ColorsSettingsFragment" />
 
+        <!-- Gradient Customization -->
+        <Preference
+            android:key="gradient_settings"
+            android:title="@string/gradient_settings_title"
+            android:summary="@string/gradient_settings_summary"
+            android:fragment="com.matrixx.settings.fragments.ui.GradientSettings" />
+
         <Preference
             android:key="font_settings"
             android:title="@string/font_settings_title"
