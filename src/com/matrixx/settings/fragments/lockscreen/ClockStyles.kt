@@ -58,7 +58,7 @@ class ClockStyles : BasePreferenceFragment(R.xml.clock_styles),
     }
 
     override fun onPreferenceTreeClick(preference: Preference): Boolean {
-        if (preference == mCustomImagePreference) {
+        if (preference.key == KEY_CUSTOM_AOD_IMAGE) {
             try {
                 val intent = Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI)
                 intent.type = "image/*"
@@ -122,18 +122,7 @@ class ClockStyles : BasePreferenceFragment(R.xml.clock_styles),
         val pref = mCustomImagePreference ?: return
         val ctx = context ?: return
 
-        val clockStyle = Settings.Secure.getIntForUser(
-            ctx.contentResolver,
-            "clock_style", 0, UserHandle.USER_CURRENT
-        )
         val imagePath = Settings.System.getString(ctx.contentResolver, "custom_aod_image_uri")
-
-        if (imagePath != null && clockStyle > 0) {
-            pref.summary = imagePath
-            pref.isEnabled = true
-        } else if (clockStyle == 0) {
-            pref.summary = ctx.getString(R.string.custom_aod_image_not_supported)
-            pref.isEnabled = false
-        }
+        pref.summary = imagePath ?: ctx.getString(R.string.lockscreen_custom_image_pick_summary)
     }
 }
