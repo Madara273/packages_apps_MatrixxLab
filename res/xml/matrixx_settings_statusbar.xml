@@ -59,6 +59,12 @@
             android:summary="@string/status_bar_clock_chip_summary" />
 			
         <Preference
+            android:key="dynamic_bar"
+            android:title="@string/dynamic_bar"
+            android:summary="@string/dynamic_bar_enable_summary"
+            android:fragment="com.matrixx.settings.fragments.statusbar.DynamicBar" />
+
+        <Preference
             android:key="cutout_progress"
             android:title="@string/cutout_progress_title"
             android:summary="@string/cutout_progress_summary"
