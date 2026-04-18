@@ -1752,4 +1752,8 @@ sensors are subject to hardware compatibility. Enabling sensors for ambient disp
     <!-- Show volume percentage -->
     <string name="show_volume_percentage_title">Show volume percentage</string>
     <string name="show_volume_percentage_summary">Show volume percentage in redesigned volume dialog</string>
+
+    <!-- Emoji style -->
+    <string name="emoji_style_title">Emoji style</string>
+    <string name="emoji_style_summary">Choose the system emoji pack without changing text fonts</string>
 </resources>
