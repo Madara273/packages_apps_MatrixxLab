@@ -29,8 +29,9 @@ import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settingslib.search.SearchIndexable;
 
 import com.matrixx.settings.preferences.SystemSettingListPreference;
+import com.matrixx.settings.preferences.SystemPropertySwitchPreference;
 import com.android.internal.util.matrixx.ThemeUtils;
-import com.matrixx.settings.utils.SystemRestartUtils;
+import com.android.internal.util.matrixx.SystemRestartUtils;
 
 import java.util.List;
 
@@ -42,10 +43,12 @@ public class UserInterface extends SettingsPreferenceFragment
 
     private static final String KEY_WIFI_ICON_STYLE = "wifi_icon_style";
     private static final String KEY_FONT_SETTINGS = "font_settings";
+    private static final String SYS_ANI_OVERRIDE_ENABLED = "persist.sys.activity_anim_perf_override";
 
     private SystemSettingListPreference mWifiIconStyle;
     private Preference mFontSettingsPref;
     private ThemeUtils mThemeUtils;
+    private SystemPropertySwitchPreference mAniOverrideEnabled;
 
     private static final String[] WIFI_ICON_OVERLAYS = {
             "com.custom.overlay.systemui.wifiAurora",
@@ -69,6 +72,9 @@ public class UserInterface extends SettingsPreferenceFragment
         }
 
         mFontSettingsPref = findPreference(KEY_FONT_SETTINGS);
+      
+        mAniOverrideEnabled = (SystemPropertySwitchPreference) findPreference(SYS_ANI_OVERRIDE_ENABLED);
+        mAniOverrideEnabled.setOnPreferenceChangeListener(this);
     }
 
     private void updateStyle(String key, String category, String target,
@@ -107,6 +113,11 @@ public class UserInterface extends SettingsPreferenceFragment
             Settings.System.putIntForUser(resolver,
                     KEY_WIFI_ICON_STYLE, value, UserHandle.USER_CURRENT);
             updateWifiIconStyle();
+            return true;
+        }
+ 
+        if (preference == mAniOverrideEnabled) {
+            SystemRestartUtils.showSystemRestartDialog(getContext());
             return true;
         }
 

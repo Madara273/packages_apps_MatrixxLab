@@ -71,6 +71,12 @@
         android:key="ui_category"
         android:title="@string/ui_title">
 
+        <com.matrixx.settings.preferences.SystemPropertySwitchPreference
+            android:key="persist.sys.activity_anim_perf_override"
+            android:title="@string/activity_anim_perf_override_title"
+            android:summary="@string/activity_anim_perf_override_summary"
+            android:defaultValue="false" />
+
         <!-- Ambient Display -->
         <Preference
             android:key="doze_fragment"
