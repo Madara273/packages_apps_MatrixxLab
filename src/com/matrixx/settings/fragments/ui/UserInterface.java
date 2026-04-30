@@ -93,7 +93,7 @@ public class UserInterface extends SettingsPreferenceFragment
             mThemeUtils.setOverlayEnabled(category, overlayPackages[style - 1], target);
         }
         if (restartSystemUI) {
-            SystemRestartUtils.restartSystemUI(getContext());
+            SystemRestartUtils.showSystemRestartDialog(getContext());
         }
     }
 
