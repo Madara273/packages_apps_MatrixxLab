@@ -31,4 +31,7 @@
     <color name="font_drop_down_bg_dark">@*android:color/system_surface_bright_dark</color>
     <color name="op_control_text_color_secondary">@color/op_control_text_color_secondary_light</color>
     <color name="op_control_text_color_secondary_light">#66000000</color>
+
+    <!-- Edge light -->
+    <color name="edge_light_preview_shell_stroke">#ff424242</color>
 </resources>

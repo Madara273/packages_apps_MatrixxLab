@@ -72,4 +72,7 @@
 
     <!-- Sensor trigger values -->
     <item name="pickup_sensor_value" format="float" type="dimen">1.0</item>
+
+    <!-- Edge light -->
+    <integer name="edge_light_preview_pulse_duration_ms">6000</integer>
 </resources>
