@@ -38,6 +38,7 @@ import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settingslib.search.SearchIndexable;
 
+import com.matrixx.settings.preferences.SystemSettingSwitchPreference;
 import com.matrixx.settings.utils.DeviceUtils;
 import com.matrixx.settings.utils.TelephonyUtils;
 
@@ -60,9 +61,11 @@ public class Sound extends SettingsPreferenceFragment {
     private static final String KEY_VIBRATE_DISCONNECT = "vibrate_on_disconnect";
     private static final String KEY_VOLUME_PANEL_LEFT = "volume_panel_on_left";
     private static final String KEY_VOLUME_HAPTIC = "volume_dialog_haptic_feedback";
+    private static final String KEY_SHOW_VOLUME_PERCENTAGE = "show_volume_percentage";
 
     private SwitchPreferenceCompat mVolumePanelLeft;
     private SwitchPreferenceCompat mVolumeHaptic;
+    private SystemSettingSwitchPreference mShowVolumePercentage;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -72,6 +75,8 @@ public class Sound extends SettingsPreferenceFragment {
 
         final Context context = getContext();
         final PreferenceScreen prefScreen = getPreferenceScreen();
+
+        mShowVolumePercentage = prefScreen.findPreference(KEY_SHOW_VOLUME_PERCENTAGE);
 
         boolean isAudioPanelOnLeft = LineageSettings.Secure.getIntForUser(context.getContentResolver(),
                 LineageSettings.Secure.VOLUME_PANEL_ON_LEFT, isAudioPanelOnLeftSide(context) ? 1 : 0,

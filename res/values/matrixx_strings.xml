@@ -1748,4 +1748,8 @@ sensors are subject to hardware compatibility. Enabling sensors for ambient disp
     <!-- Animation -->
     <string name="activity_anim_perf_override_title">Activity Animation Override</string>
     <string name="activity_anim_perf_override_summary">Use optimized activity transition animations</string>
+
+    <!-- Show volume percentage -->
+    <string name="show_volume_percentage_title">Show volume percentage</string>
+    <string name="show_volume_percentage_summary">Show volume percentage in redesigned volume dialog</string>
 </resources>
