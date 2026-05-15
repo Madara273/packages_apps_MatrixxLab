@@ -22,7 +22,7 @@
         android:icon="@drawable/ic_team" >
     <intent
         android:action="android.intent.action.VIEW"
-        android:data="https://www.projectmatrixx.org/team" />
+        android:data="https://www.projectmatrixx.com/team" />
     </Preference>
 
     <Preference
@@ -30,7 +30,7 @@
         android:summary="@string/devices_summary" >
     <intent
         android:action="android.intent.action.VIEW"
-        android:data="https://www.projectmatrixx.org/downloads" />
+        android:data="https://www.projectmatrixx.com/downloads" />
     </Preference>
 
     <Preference
@@ -39,7 +39,7 @@
         android:summary="@string/get_changelogs_summary">
         <intent
             android:action="android.intent.action.VIEW"
-            android:data="https://www.projectmatrixx.org/changelog" />
+            android:data="https://www.projectmatrixx.com/changelog" />
     </Preference>
 
     <Preference
@@ -65,7 +65,7 @@
         android:summary="@string/matrixx_legal_desc">
     <intent
         android:action="android.intent.action.VIEW"
-        android:data="https://www.projectmatrixx.org/legal" />
+        android:data="https://www.projectmatrixx.com/legal" />
     </Preference>
     
 </PreferenceScreen>
