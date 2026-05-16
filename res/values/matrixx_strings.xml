@@ -1760,4 +1760,9 @@ sensors are subject to hardware compatibility. Enabling sensors for ambient disp
     <!-- Emoji style -->
     <string name="emoji_style_title">Emoji style</string>
     <string name="emoji_style_summary">Choose the system emoji pack without changing text fonts</string>
+
+    <!-- AOD Peek -->
+    <string name="doze_peek_title">AOD Peek</string>
+    <string name="doze_peek_summary">Show ambient display briefly when the screen turns off</string>
+    <string name="doze_peek_duration_title">Peek duration</string>
 </resources>
