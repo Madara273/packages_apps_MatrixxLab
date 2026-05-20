@@ -15,13 +15,13 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- Matrixx lab -->
-    <string name="matrixx_lab_title">Matrixx Lab</string>
-    <string name="matrixx_lab_summary">Redefining the Fabric of Customization</string>
-    <string name="qs_panel_options_title">Quick Settings</string>
-    <string name="qs_panel_options_summary">Quick settings style, and customization</string>
-    <string name="button_options_title">Buttons</string>
-    <string name="button_options_summary">Powermenu &amp; button settings</string>
-    <string name="ui_options_title">User Interface</string>
+    <string name="matrixx_lab_title">Лаборатория Matrixx</string>
+    <string name="matrixx_lab_summary">Переосмысление сути персонализации</string>
+    <string name="qs_panel_options_title">Быстрые настройки </string>
+    <string name="qs_panel_options_summary">Быстрые настройки стиля и персонализация</string>
+    <string name="button_options_title">Кнопки</string>
+    <string name="button_options_summary">Настройки меню питания &amp; кнопок</string>
+    <string name="ui_options_title">Пользовательский интерфейс</string>
     <string name="ui_options_summary">Various User interface customization</string>
     <string name="sound_options_title">Sound</string>
     <string name="sound_options_title_summary">Volume Panel &amp; haptics</string>

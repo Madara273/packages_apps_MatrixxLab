@@ -16,89 +16,89 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- Matrixx lab -->
     <string name="matrixx_lab_title">Matrixx Lab</string>
-    <string name="matrixx_lab_summary">Redefinindo a essência da personalização</string>
-    <string name="qs_panel_options_title">Configurações rápidas</string>
-    <string name="qs_panel_options_summary">Configurações rápidas de estilo e personalização</string>
-    <string name="button_options_title">Botões</string>
-    <string name="button_options_summary">Menu de energia &amp; botões</string>
-    <string name="ui_options_title">“Interface” do Usuário</string>
+    <string name="matrixx_lab_summary">Redefining the Fabric of Customization</string>
+    <string name="qs_panel_options_title">Quick Settings</string>
+    <string name="qs_panel_options_summary">Quick settings style, and customization</string>
+    <string name="button_options_title">Buttons</string>
+    <string name="button_options_summary">Powermenu &amp; button settings</string>
+    <string name="ui_options_title">User Interface</string>
     <string name="ui_options_summary">Various User interface customization</string>
-    <string name="sound_options_title">Som</string>
+    <string name="sound_options_title">Sound</string>
     <string name="sound_options_title_summary">Volume Panel &amp; haptics</string>
-    <string name="misc_title">Diversos</string>
-    <string name="misc_options_title">Diversos</string>
-    <string name="misc_options_summary">\"Falsificação\", modo de jogo &amp; Configuração de sistema </string>
-    <string name="statusbar_options_title">Barra de Estado</string>
-    <string name="statusbar_options_summary">Ícone da barra de estado &amp; ícone recursos de relógio</string>
-    <string name="notifications_options_title">Notificações</string>
-    <string name="notifications_options_summary">Atenção &amp; outras personalizações...</string>
-    <string name="about_options_title">Sobre</string>
-    <string name="about_options_summary">Saiba sobre o Matrixx</string>
-    <string name="lockscreen_options_title">Tela de bloqueio</string>
-    <string name="lockscreen_options_title_summary">Personalize o relógio e muito mais...</string>
-    <string name="ui_title">Recursos de interface</string>
+    <string name="misc_title">Miscellaneous</string>
+    <string name="misc_options_title">Misc</string>
+    <string name="misc_options_summary">Spoofing, Gaming mode &amp; System settings </string>
+    <string name="statusbar_options_title">Status Bar</string>
+    <string name="statusbar_options_summary">Status bar icon &amp; clock customizations</string>
+    <string name="notifications_options_title">Notifications</string>
+    <string name="notifications_options_summary">Heads up &amp; Other customizations...</string>
+    <string name="about_options_title">About</string>
+    <string name="about_options_summary">Know about this Matrixx</string>
+    <string name="lockscreen_options_title">Lockscreen</string>
+    <string name="lockscreen_options_title_summary">Customize lockscreen clock and many more...</string>
+    <string name="ui_title">User Interface</string>
     <!-- About Matrixx -->
     <string name="about_matrixx">About Matrixx</string>
     <string name="team_matrixx">Team Matrixx</string>
-    <string name="team_matrixx_desc">Olá! Nós somos o Time Matrixx</string>
-    <string name="devices_summary">Lista de dispositivos oficiais</string>
-    <string name="matrixx_devices_title">Dispositivos oficiais</string>
-    <string name="get_changelogs_title">Últimas mudanças</string>
-    <string name="get_changelogs_summary">Verifique as últimas mudanças</string>
-    <string name="about_device_name">Dispositivo</string>
-    <string name="matrixx_source_title">Github</string>
-    <string name="matrixx_source_summary">Nós amamos o código aberto, Confira</string>
+    <string name="team_matrixx_desc">Hey! We are Team Matrixx</string>
+    <string name="devices_summary">Official devices list</string>
+    <string name="matrixx_devices_title">Official Devices</string>
+    <string name="get_changelogs_title">Latest changelog</string>
+    <string name="get_changelogs_summary">Check latest changes</string>
+    <string name="about_device_name">Device</string>
+    <string name="matrixx_source_title">GitHub</string>
+    <string name="matrixx_source_summary">We love open source, check us out</string>
     <string name="matrixx_telegram_title">Matrixx community</string>
-    <string name="matrixx_telegram_summary">Estamos no telegram, acompanhe!</string>
-    <string name="matrixx_update_title">Atualizações</string>
-    <string name="matrixx_update_summary">Verifique e instale os últimos lançamentos</string>
+    <string name="matrixx_telegram_summary">We are on telegram. Join us!</string>
+    <string name="matrixx_update_title">Updates</string>
+    <string name="matrixx_update_summary">Check and download latest update</string>
     <string name="matrixx_legal">Matrixx legal</string>
     <string name="matrixx_legal_desc">Legal terms of use</string>
     <!-- Color Picker -->
-    <string name="dialog_color_picker">Seletor de cores</string>
-    <string name="press_color_to_apply">Pressione a cor abaixo para aplicar</string>
-    <string name="set">Definir</string>
-    <string name="color_default">Padrão</string>
+    <string name="dialog_color_picker">Color Picker</string>
+    <string name="press_color_to_apply">Press on color below to apply</string>
+    <string name="set">Set</string>
+    <string name="color_default">Default</string>
     <!-- Custom seekbar -->
-    <string name="custom_seekbar_value">Valor: <xliff:g id="v">%s</xliff:g></string>
-    <string name="custom_seekbar_default_value">por padrão</string>
-    <string name="custom_seekbar_default_value_to_set">Valor padrão: <xliff:g id="v">%s</xliff:g>\n Toque e segure para definir</string>
-    <string name="custom_seekbar_default_value_is_set">O valor padrão está definido</string>
+    <string name="custom_seekbar_value">Value: <xliff:g id="v">%s</xliff:g></string>
+    <string name="custom_seekbar_default_value">by default</string>
+    <string name="custom_seekbar_default_value_to_set">Default value: <xliff:g id="v">%s</xliff:g>\nLong tap to set</string>
+    <string name="custom_seekbar_default_value_is_set">Default value is set</string>
     <!-- General strings -->
     <string name="ok">OK</string>
     <string name="reset">Reset</string>
-    <string name="cancel">Cancelar</string>
-    <string name="save">Salvar</string>
-    <string name="discard_changes">Descartar mudanças</string>
-    <string name="never">Nunca</string>
-    <string name="always">Sempre</string>
-    <string name="caution">Cuidado</string>
-    <string name="delete">Deletar</string>
-    <string name="delete_message">Remover o “item” selecionado?</string>
-    <string name="choose_app">Escolha o aplicativo</string>
-    <string name="enable">Habilitar</string>
-    <string name="disable">Desabilitar</string>
-    <string name="accent_color">Cor de destaque</string>
-    <string name="notification_color">Cor de notificação</string>
-    <string name="wallpaper_color">Cor do papel de parede</string>
-    <string name="rainbow_color">Cores do arco-íris</string>
-    <string name="custom_color">Cor personalizada</string>
-    <string name="restart_systemui">Reinicie a “interface” para que a alteração entre em vigor!</string>
-    <string name="default_value">Padrão</string>
-    <string name="search_apps">Procurar apps</string>
-    <string name="apply">Aplicar</string>
+    <string name="cancel">Cancel</string>
+    <string name="save">Save</string>
+    <string name="discard_changes">Discard changes</string>
+    <string name="never">Never</string>
+    <string name="always">Always</string>
+    <string name="caution">Caution</string>
+    <string name="delete">Delete</string>
+    <string name="delete_message">Remove selected item?</string>
+    <string name="choose_app">Choose app</string>
+    <string name="enable">Enable</string>
+    <string name="disable">Disable</string>
+    <string name="accent_color">Accent color</string>
+    <string name="notification_color">Notification color</string>
+    <string name="wallpaper_color">Wallpaper color</string>
+    <string name="rainbow_color">Rainbow color</string>
+    <string name="custom_color">Custom color</string>
+    <string name="restart_systemui">Restart SystemUI for change to take effect!</string>
+    <string name="default_value">Default</string>
+    <string name="search_apps">Search apps</string>
+    <string name="apply">Apply</string>
     <!-- SystemUI restart dialog -->
-    <string name="systemui_restart_title">É necessário reiniciar a “interface” do sistema</string>
-    <string name="systemui_restart_message">Para que as alterações entrem em vigor, é necessário reiniciar o SystemUI. Reiniciar o SystemUI agora?</string>
-    <string name="systemui_restart_yes">Sim</string>
-    <string name="systemui_restart_not_now">Não agora</string>
-    <string name="systemui_restart_process">Reiniciando a “interface” do sistema para aplicar as alterações...</string>
+    <string name="systemui_restart_title">SystemUI restart required</string>
+    <string name="systemui_restart_message">For changes to take effect, a SystemUI restart is required. Restart SystemUI now?</string>
+    <string name="systemui_restart_yes">Yes</string>
+    <string name="systemui_restart_not_now">Not now</string>
+    <string name="systemui_restart_process">Restarting SystemUI to apply changes...</string>
     <!-- Units -->
     <string name="unit_hz">hz</string>
-    <string name="unit_milliseconds">milissegundos</string>
-    <string name="unit_seconds">segundos</string>
+    <string name="unit_milliseconds">milliseconds</string>
+    <string name="unit_seconds">seconds</string>
     <!-- Miscellaneous -->
-    <string name="miscellaneous_spoofing_category">Falsificação</string>
+    <string name="miscellaneous_spoofing_category">Spoofing</string>
     <string name="miscellaneous_developer_options_category">Developer options</string>
     <string name="miscellaneous_pairip_activity_block_title">Block PairIP license verification</string>
     <string name="miscellaneous_pairip_activity_block_summary">Prevent Play Store apps from launching the \"Get this app from Play\" screen when not installed by the Play Store</string>
@@ -517,7 +517,6 @@
     <string name="backlight_summary_enabled_with_timeout">Enabled for <xliff:g id="timeout">%s</xliff:g></string>
     <string name="backlight_summary_enabled">Enabled</string>
     <plurals name="backlight_timeout_time">
-        <item quantity="one"><xliff:g id="seconds">%d</xliff:g> second</item>
         <item quantity="other"><xliff:g id="seconds">%d</xliff:g> seconds</item>
     </plurals>
     <!-- Power off verify -->
