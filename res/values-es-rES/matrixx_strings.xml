@@ -15,15 +15,15 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- Matrixx lab -->
-    <string name="matrixx_lab_title">Matrixx Lab</string>
-    <string name="matrixx_lab_summary">Redefining the Fabric of Customization</string>
-    <string name="qs_panel_options_title">Quick Settings</string>
-    <string name="qs_panel_options_summary">Quick settings style, and customization</string>
-    <string name="button_options_title">Buttons</string>
+    <string name="matrixx_lab_title">Laboratorio Matrixx</string>
+    <string name="matrixx_lab_summary">Redefiniendo la personalización de fábrica</string>
+    <string name="qs_panel_options_title">Ajustes rápidos</string>
+    <string name="qs_panel_options_summary">Ajustes rápidos estilo y personalización</string>
+    <string name="button_options_title">Botones</string>
     <string name="button_options_summary">Powermenu &amp; button settings</string>
-    <string name="ui_options_title">User Interface</string>
+    <string name="ui_options_title">Interfaz de usuario</string>
     <string name="ui_options_summary">Various User interface customization</string>
-    <string name="sound_options_title">Sound</string>
+    <string name="sound_options_title">Sonido</string>
     <string name="sound_options_title_summary">Volume Panel &amp; haptics</string>
     <string name="misc_title">Miscellaneous</string>
     <string name="misc_options_title">Misc</string>
@@ -33,15 +33,15 @@
     <string name="notifications_options_title">Notifications</string>
     <string name="notifications_options_summary">Heads up &amp; Other customizations...</string>
     <string name="about_options_title">About</string>
-    <string name="about_options_summary">Know about this Matrixx</string>
+    <string name="about_options_summary">Conoce sobre Matrixx</string>
     <string name="lockscreen_options_title">Lockscreen</string>
     <string name="lockscreen_options_title_summary">Customize lockscreen clock and many more...</string>
-    <string name="ui_title">User Interface</string>
+    <string name="ui_title">Interfaz de usuario</string>
     <!-- About Matrixx -->
     <string name="about_matrixx">About Matrixx</string>
     <string name="team_matrixx">Team Matrixx</string>
     <string name="team_matrixx_desc">Hey! We are Team Matrixx</string>
-    <string name="devices_summary">Official devices list</string>
+    <string name="devices_summary">Lista de dispositivos Oficial</string>
     <string name="matrixx_devices_title">Official Devices</string>
     <string name="get_changelogs_title">Latest changelog</string>
     <string name="get_changelogs_summary">Check latest changes</string>
@@ -50,7 +50,7 @@
     <string name="matrixx_source_summary">We love open source, check us out</string>
     <string name="matrixx_telegram_title">Matrixx community</string>
     <string name="matrixx_telegram_summary">We are on telegram. Join us!</string>
-    <string name="matrixx_update_title">Updates</string>
+    <string name="matrixx_update_title">Actualizaciones</string>
     <string name="matrixx_update_summary">Check and download latest update</string>
     <string name="matrixx_legal">Matrixx legal</string>
     <string name="matrixx_legal_desc">Legal terms of use</string>
@@ -62,13 +62,13 @@
     <!-- Custom seekbar -->
     <string name="custom_seekbar_value">Value: <xliff:g id="v">%s</xliff:g></string>
     <string name="custom_seekbar_default_value">by default</string>
-    <string name="custom_seekbar_default_value_to_set">Default value: <xliff:g id="v">%s</xliff:g>\nLong tap to set</string>
+    <string name="custom_seekbar_default_value_to_set">Valor predeterminado: <xliff:g id="v">%s</xliff:g>\nMantén presionado para configurar</string>
     <string name="custom_seekbar_default_value_is_set">Default value is set</string>
     <!-- General strings -->
     <string name="ok">OK</string>
     <string name="reset">Reset</string>
     <string name="cancel">Cancel</string>
-    <string name="save">Save</string>
+    <string name="save">Guardado</string>
     <string name="discard_changes">Discard changes</string>
     <string name="never">Never</string>
     <string name="always">Always</string>
@@ -81,9 +81,9 @@
     <string name="accent_color">Accent color</string>
     <string name="notification_color">Notification color</string>
     <string name="wallpaper_color">Wallpaper color</string>
-    <string name="rainbow_color">Rainbow color</string>
+    <string name="rainbow_color">Color arcoíris</string>
     <string name="custom_color">Custom color</string>
-    <string name="restart_systemui">Restart SystemUI for change to take effect!</string>
+    <string name="restart_systemui">Reinicie UI del sistema para que los cambios surtan efecto</string>
     <string name="default_value">Default</string>
     <string name="search_apps">Search apps</string>
     <string name="apply">Apply</string>
@@ -101,7 +101,7 @@
     <string name="miscellaneous_spoofing_category">Spoofing</string>
     <string name="miscellaneous_developer_options_category">Developer options</string>
     <string name="miscellaneous_pairip_activity_block_title">Block PairIP license verification</string>
-    <string name="miscellaneous_pairip_activity_block_summary">Prevent Play Store apps from launching the \"Get this app from Play\" screen when not installed by the Play Store</string>
+    <string name="miscellaneous_pairip_activity_block_summary">Evitar que las aplicaciones de la Play Store abran la pantalla, Obtener esta aplicación de Google Play cuando no fueron instaladas desde la Play Store</string>
     <!-- Status bar -->
     <string name="status_bar_icons_category">Icons</string>
     <string name="status_bar_tuner_title">Status bar tuner</string>
@@ -136,7 +136,7 @@
     <string name="status_bar_clock_auto_hide_hdur_summary">Number of seconds to hide clock</string>
     <string name="status_bar_clock_auto_hide_sdur_title">Show duration</string>
     <string name="status_bar_clock_auto_hide_sdur_summary">Number of seconds to wait before hiding clock</string>
-    <string name="status_bar_clock_auto_hide_launcher_title">Auto hide on launcher</string>
+    <string name="status_bar_clock_auto_hide_launcher_title">Ocultar automáticamente en el lanzador</string>
     <string name="status_bar_clock_auto_hide_launcher_summary">Hide clock if launcher is visible</string>
     <string name="status_bar_clock_chip_title">Clock background chip</string>
     <string name="status_bar_clock_chip_summary">Select custom background chip behind clock</string>
@@ -146,8 +146,8 @@
     <string name="solid_gradient">Solid Gradient side</string>
     <string name="solid_gradient_corner">Solid accent gradient sharp</string>
     <string name="solid_gradient_void">Gradient Void</string>
-    <string name="solid_gradient_neumorph">Neumorph gradient</string>
-    <string name="solid_gradient_stroke">Sharp gradient stroke</string>
+    <string name="solid_gradient_neumorph">Gradiente Neumorfismo</string>
+    <string name="solid_gradient_stroke">Trazo de gradiente pronunciado</string>
     <string name="solid_accent_transperent">Accent transperent</string>
     <string name="solid_gradient_light">Gradient light</string>
     <string name="solid_gradient_shape">Sharp gradient corner</string>
@@ -170,8 +170,8 @@
     <string name="status_bar_date_string_edittext_title">Must be in DateFormat eg. MM/dd/yy</string>
     <string name="status_bar_date_string_edittext_summary">Enter string</string>
     <string name="status_bar_clock_date_position">Date position</string>
-    <string name="status_bar_clock_date_right">Right of time</string>
-    <string name="status_bar_clock_date_left">Left of time</string>
+    <string name="status_bar_clock_date_right">Fecha de lado derecho</string>
+    <string name="status_bar_clock_date_left">Fecha de lado izquierdo</string>
     <!-- Battery bar -->
     <string name="battery_bar_title">Battery bar</string>
     <string name="battery_bar_summary">Display and customize battery bar above status bar</string>
@@ -188,17 +188,17 @@
     <string name="battery_bar_blend_color_title">Blend colors</string>
     <string name="battery_bar_blend_color_summary">Blend full/empty colors corresponding to battery percentage</string>
     <string name="battery_bar_blend_color_reverse_title">Reverse color direction</string>
-    <string name="battery_bar_blend_color_reverse_summary_off">Full &#8594; empty: red &#8592; green &#8592; blue &#8592; red</string>
+    <string name="battery_bar_blend_color_reverse_summary_off">Lleno &#8594; vacio: red &#8592; green &#8592; blue &#8592; red</string>
     <string name="battery_bar_blend_color_reverse_summary_on">Full &#8594; empty: red &#8594; green &#8594; blue &#8594; red</string>
-    <string name="battery_bar_use_gradient_color">Use gradient color</string>
+    <string name="battery_bar_use_gradient_color">Utiliza un color degradado</string>
     <string name="battery_bar_gradient_color_summary">Use gradient color as a scale for the battery level</string>
     <string name="battery_bar_high_color">High level color\"</string>
     <string name="battery_bar_low_color">Low level color\"</string>
     <string name="battery_bar_animate_color">Charging animation color</string>
     <!-- Custom logo -->
     <string name="status_bar_logo_title">Logo</string>
-    <string name="status_bar_logo_summary">Display a custom logo on the status bar</string>
-    <string name="status_bar_logo_position_title">Logo position</string>
+    <string name="status_bar_logo_summary">Mostrar un logotipo personalizado en la barra de estado</string>
+    <string name="status_bar_logo_position_title">Posición de logo</string>
     <string name="status_bar_logo_position_left">Left side</string>
     <string name="status_bar_logo_position_right">Right side</string>
     <string name="status_bar_logo_style_title">Logo style</string>
@@ -218,7 +218,7 @@
     <string name="status_bar_logo_style_fire">Fire</string>
     <string name="status_bar_logo_style_heart">Heart</string>
     <string name="status_bar_logo_style_nike">Nike</string>
-    <string name="status_bar_logo_style_pacman">Pac-man</string>
+    <string name="status_bar_logo_style_pacman">Pac-Man</string>
     <string name="status_bar_logo_style_puma">Puma</string>
     <string name="status_bar_logo_style_rog">ROG</string>
     <string name="status_bar_logo_style_spiderman">Spider-Man</string>
@@ -251,13 +251,13 @@
     <string name="qs_header_image_summary">Select QS background header image</string>
     <string name="qs_header_daylight_pack_title">Header image collection</string>
     <string name="qs_header_shadow_title">Header image shadow</string>
-    <string name="qs_header_shadow_summary">For better visibility on bright images</string>
+    <string name="qs_header_shadow_summary">Para una mejor visibilidad en imágenes brillantes</string>
     <string name="qs_header_static_provider_title">Static image</string>
     <string name="qs_header_daylight_provider_title">Image collection</string>
     <string name="qs_header_file_provider_title">Custom image</string>
     <string name="qs_header_image_processing">Processing image...</string>
     <string name="qs_header_image_success">Header image saved successfully</string>
-    <string name="qs_header_image_error">Failed to save header image</string>
+    <string name="qs_header_image_error">No se pudo guardar la imagen de encabezado</string>
     <string name="qs_header_provider_title">Header provider</string>
     <string name="qs_header_browse_title">Browse installed headers</string>
     <string name="qs_header_browse_summary">Browse all available header collections</string>
@@ -315,7 +315,7 @@
     <string name="fp_success_vibrate_title">Fingerprint authentication vibration</string>
     <string name="fp_success_vibrate_summary">Vibrate when fingerprint authentication is successful</string>
     <string name="fp_error_vibrate_title">Fingerprint error vibration</string>
-    <string name="fp_error_vibrate_summary">Vibrate when fingerprint authentication fails</string>
+    <string name="fp_error_vibrate_summary">Vibrar cuando falle la autenticación por huella dactilar</string>
     <!-- Swap capacitive keys -->
     <string name="swap_capacitive_keys_title">Swap capacitive buttons</string>
     <string name="swap_capacitive_keys_summary">Swap the order of recents and back buttons</string>
@@ -323,7 +323,7 @@
     <string name="anbi_title">Accidental touch</string>
     <string name="anbi_summary">Prevent interaction with navigation buttons while the screen is being touched</string>
     <!-- Notification channels -->
-    <string name="channel_light_settings_name">Light settings preview</string>
+    <string name="channel_light_settings_name">Vista previa de los ajustes de iluminación</string>
     <!-- Notification light dialogs -->
     <string name="edit_light_settings">Edit light settings</string>
     <string name="pulse_speed_title">Pulse length and speed</string>
@@ -349,7 +349,7 @@
     <string name="light_brightness_zen">Do Not Disturb</string>
     <!-- Battery light settings -->
     <string name="light_brightness_category">Light brightness settings</string>
-    <string name="battery_light_title">Battery light</string>
+    <string name="battery_light_title">Luz de la batería</string>
     <string name="battery_light_enable_title">Enable battery light</string>
     <string name="battery_light_summary">Configure led color based on battery level and status</string>
     <string name="battery_low_pulse_title">Pulse if battery low</string>
