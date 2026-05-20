@@ -17,8 +17,11 @@
 package com.matrixx.settings.fragments.ui;
 
 import android.content.Context;
+import android.content.om.IOverlayManager;
 import android.content.res.Resources;
 import android.os.Bundle;
+import android.os.ServiceManager;
+import android.os.UserHandle;
 import android.os.SystemProperties;
 import android.provider.SearchIndexableResource;
 
@@ -59,6 +62,19 @@ public class QuickSwitch extends SettingsPreferenceFragment
         boolean isPixelAvailable =
         android.os.SystemProperties.getBoolean("ro.matrixx.pixel_launcher", false);
         int defaultLauncher = SystemProperties.getInt(QUICKSWITCH_KEY, 0);
+        try {
+            IOverlayManager overlayManager =
+                    IOverlayManager.Stub.asInterface(
+                            ServiceManager.getService(
+                                    Context.OVERLAY_SERVICE));
+
+            if (overlayManager != null) {
+                overlayManager.setEnabled(
+                        WALLPAPER_OVERLAY_KEY,
+                        defaultLauncher == 0,
+                        UserHandle.USER_CURRENT);
+            }
+        } catch (Exception ignored) {}
         quickSwitchPref = findPreference(QUICKSWITCH_KEY);
         quickSwitchPref.setOnPreferenceChangeListener(this);
         Context context = getContext();
@@ -103,9 +119,27 @@ public class QuickSwitch extends SettingsPreferenceFragment
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         if (preference == quickSwitchPref) {
+
+            int launcher = Integer.parseInt((String) newValue);
+
+            try {
+                IOverlayManager overlayManager =
+                        IOverlayManager.Stub.asInterface(
+                                ServiceManager.getService(
+                                        Context.OVERLAY_SERVICE));
+
+                if (overlayManager != null) {
+                    overlayManager.setEnabled(
+                            WALLPAPER_OVERLAY_KEY,
+                            launcher == 0,
+                            UserHandle.USER_CURRENT);
+                }
+            } catch (Exception ignored) {}
+
             SystemRestartUtils.showSystemRestartDialog(getContext());
             return true;
         }
+
         return false;
     }
 
