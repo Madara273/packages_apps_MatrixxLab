@@ -41,22 +41,12 @@ public class UserInterface extends SettingsPreferenceFragment
 
     public static final String TAG = "UserInterface";
 
-    private static final String KEY_WIFI_ICON_STYLE = "wifi_icon_style";
     private static final String KEY_FONT_SETTINGS = "font_settings";
     private static final String SYS_ANI_OVERRIDE_ENABLED = "persist.sys.activity_anim_perf_override";
 
-    private SystemSettingListPreference mWifiIconStyle;
     private Preference mFontSettingsPref;
     private ThemeUtils mThemeUtils;
     private SystemPropertySwitchPreference mAniOverrideEnabled;
-
-    private static final String[] WIFI_ICON_OVERLAYS = {
-            "com.custom.overlay.systemui.wifiAurora",
-            "com.android.systemui.wifibar_c",
-            "com.custom.overlay.systemui.wifiLinear",
-            "com.android.systemui.wifiNothingDot",
-            "com.android.systemui.wifibar_d"
-    };
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -66,40 +56,10 @@ public class UserInterface extends SettingsPreferenceFragment
 
         mThemeUtils = ThemeUtils.getInstance(getActivity());
 
-        mWifiIconStyle = findPreference(KEY_WIFI_ICON_STYLE);
-        if (mWifiIconStyle != null) {
-            mWifiIconStyle.setOnPreferenceChangeListener(this);
-        }
-
         mFontSettingsPref = findPreference(KEY_FONT_SETTINGS);
       
         mAniOverrideEnabled = (SystemPropertySwitchPreference) findPreference(SYS_ANI_OVERRIDE_ENABLED);
         mAniOverrideEnabled.setOnPreferenceChangeListener(this);
-    }
-
-    private void updateStyle(String key, String category, String target,
-            int defaultValue, String[] overlayPackages, boolean restartSystemUI) {
-        final int style = Settings.System.getIntForUser(
-                getContext().getContentResolver(),
-                key,
-                defaultValue,
-                UserHandle.USER_CURRENT
-        );
-        if (mThemeUtils == null) {
-            mThemeUtils = ThemeUtils.getInstance(getContext());
-        }
-        mThemeUtils.setOverlayEnabled(category, target, target);
-        if (style > 0 && style <= overlayPackages.length) {
-            mThemeUtils.setOverlayEnabled(category, overlayPackages[style - 1], target);
-        }
-        if (restartSystemUI) {
-            SystemRestartUtils.showSystemRestartDialog(getContext());
-        }
-    }
-
-    private void updateWifiIconStyle() {
-        updateStyle(KEY_WIFI_ICON_STYLE, "android.theme.customization.wifi_icon",
-                "com.android.systemui", 0, WIFI_ICON_OVERLAYS, true);
     }
 
     @Override
@@ -108,14 +68,6 @@ public class UserInterface extends SettingsPreferenceFragment
         final ContentResolver resolver = context.getContentResolver();
         int value = 0;
 
-        if (preference == mWifiIconStyle) {
-            value = Integer.parseInt((String) newValue);
-            Settings.System.putIntForUser(resolver,
-                    KEY_WIFI_ICON_STYLE, value, UserHandle.USER_CURRENT);
-            updateWifiIconStyle();
-            return true;
-        }
- 
         if (preference == mAniOverrideEnabled) {
             SystemRestartUtils.showSystemRestartDialog(getContext());
             return true;
