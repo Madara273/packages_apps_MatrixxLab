@@ -1757,4 +1757,8 @@ sensors are subject to hardware compatibility. Enabling sensors for ambient disp
     <string name="doze_peek_title">AOD Peek</string>
     <string name="doze_peek_summary">Show ambient display briefly when the screen turns off</string>
     <string name="doze_peek_duration_title">Peek duration</string>
+
+    <!-- Themes -->
+    <string name="custom_system_theme_title">Themes store</string>
+    <string name="custom_system_theme_summary">Customize system appearance with themes and icon packs</string>
 </resources>
