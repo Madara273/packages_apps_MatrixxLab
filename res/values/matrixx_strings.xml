@@ -1796,4 +1796,11 @@ sensors are subject to hardware compatibility. Enabling sensors for ambient disp
     <!-- Themes -->
     <string name="custom_system_theme_title">Themes store</string>
     <string name="custom_system_theme_summary">Customize system appearance with themes and icon packs</string>
+
+    <!-- Statusbar logo color -->
+    <string name="default_string">Default</string>
+    <string name="status_bar_logo_color_title">Color</string>
+    <string name="status_bar_logo_color_default">Default (White)</string>
+    <string name="status_bar_logo_color_accent">Accent</string>
+    <string name="status_bar_logo_color_custom">Custom</string>
 </resources>

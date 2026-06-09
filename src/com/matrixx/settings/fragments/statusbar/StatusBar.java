@@ -19,6 +19,8 @@ import android.content.ContentResolver;
 import android.content.Context;
 import android.content.res.Resources;
 import android.os.Bundle;
+import android.os.UserHandle;
+import android.provider.Settings;
 
 import androidx.preference.Preference;
 import androidx.preference.Preference.OnPreferenceChangeListener;
@@ -35,6 +37,8 @@ import java.util.List;
 
 import lineageos.preference.LineageSystemSettingListPreference;
 import com.matrixx.settings.preferences.SystemSettingSwitchPreference;
+import com.matrixx.settings.preferences.SystemSettingListPreference;
+import com.matrixx.settings.preferences.colorpicker.ColorPickerPreference;
 import com.matrixx.settings.utils.DeviceUtils;
 
 @SearchIndexable
@@ -43,6 +47,8 @@ public class StatusBar extends SettingsPreferenceFragment implements
 
     private static final String TAG = "StatusBar";
     private static final String QUICK_PULLDOWN = "qs_quick_pulldown";
+    private static final String LOGO_COLOR = "status_bar_logo_color";
+    private static final String LOGO_COLOR_PICKER = "status_bar_logo_color_picker";
 
     private static final int PULLDOWN_DIR_NONE = 0;
     private static final int PULLDOWN_DIR_RIGHT = 1;
@@ -50,6 +56,8 @@ public class StatusBar extends SettingsPreferenceFragment implements
     private static final int PULLDOWN_DIR_ALWAYS = 3;
 
     private LineageSystemSettingListPreference mQuickPulldown;
+    private SystemSettingListPreference mLogoColor;
+    private ColorPickerPreference mLogoColorPicker;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -78,6 +86,41 @@ public class StatusBar extends SettingsPreferenceFragment implements
             }
         }
 
+    mLogoColor = (SystemSettingListPreference) findPreference(LOGO_COLOR);
+
+    int logoColor = Settings.System.getIntForUser(
+            resolver,
+            Settings.System.STATUS_BAR_LOGO_COLOR,
+            0,
+            UserHandle.USER_CURRENT);
+
+    mLogoColor.setValue(String.valueOf(logoColor));
+    mLogoColor.setSummary(mLogoColor.getEntry());
+    mLogoColor.setOnPreferenceChangeListener(this);
+
+    mLogoColorPicker =
+            (ColorPickerPreference) findPreference(LOGO_COLOR_PICKER);
+
+    int logoColorPicker = Settings.System.getInt(
+            resolver,
+            Settings.System.STATUS_BAR_LOGO_COLOR_PICKER,
+            0xFFFFFFFF);
+
+    mLogoColorPicker.setNewPreviewColor(logoColorPicker);
+
+    String logoColorPickerHex =
+            String.format("#%08x", (0xFFFFFFFF & logoColorPicker));
+
+    if (logoColorPickerHex.equals("#ffffffff")) {
+        mLogoColorPicker.setSummary(R.string.default_string);
+    } else {
+        mLogoColorPicker.setSummary(logoColorPickerHex);
+    }
+
+    mLogoColorPicker.setOnPreferenceChangeListener(this);
+
+    updateColorPrefs(logoColor);
+
     }
 
     @Override
@@ -88,7 +131,43 @@ public class StatusBar extends SettingsPreferenceFragment implements
             int value = Integer.parseInt((String) newValue);
             updateQuickPulldownSummary(value);
             return true;
-    }
+        } else if (preference == mLogoColor) {
+
+            int logoColor = Integer.valueOf((String) newValue);
+            int index = mLogoColor.findIndexOfValue((String) newValue);
+
+            Settings.System.putIntForUser(
+                    resolver,
+                    Settings.System.STATUS_BAR_LOGO_COLOR,
+                    logoColor,
+                    UserHandle.USER_CURRENT);
+
+            mLogoColor.setSummary(mLogoColor.getEntries()[index]);
+
+            updateColorPrefs(logoColor);
+
+            return true;
+
+        } else if (preference == mLogoColorPicker) {
+
+            String hex = ColorPickerPreference.convertToARGB(
+                    Integer.valueOf(String.valueOf(newValue)));
+
+            if (hex.equals("#ffffffff")) {
+                preference.setSummary(R.string.default_string);
+            } else {
+                preference.setSummary(hex);
+            }
+
+            int intHex = ColorPickerPreference.convertToColorInt(hex);
+
+            Settings.System.putInt(
+                    resolver,
+                    Settings.System.STATUS_BAR_LOGO_COLOR_PICKER,
+                    intHex);
+
+            return true;
+        }
 
         return false;
     }
@@ -119,6 +198,12 @@ public class StatusBar extends SettingsPreferenceFragment implements
         }
 
         mQuickPulldown.setSummary(summary);
+    }
+
+    private void updateColorPrefs(int logoColor) {
+        if (mLogoColorPicker != null) {
+            mLogoColorPicker.setEnabled(logoColor == 2);
+        }
     }
 
     @Override
