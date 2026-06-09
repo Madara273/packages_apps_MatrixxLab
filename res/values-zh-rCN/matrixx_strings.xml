@@ -83,6 +83,7 @@
     <string name="wallpaper_color">Wallpaper color</string>
     <string name="rainbow_color">Rainbow color</string>
     <string name="custom_color">Custom color</string>
+    <string name="custom_color_summary">Custom color some clock styles</string>
     <string name="restart_systemui">Restart SystemUI for change to take effect!</string>
     <string name="default_value">Default</string>
     <string name="search_apps">Search apps</string>
@@ -236,9 +237,6 @@
     <string name="status_bar_logo_style_mint">Linux Mint</string>
     <string name="status_bar_logo_style_matrixx">Matrixx</string>
     <string name="status_bar_logo_style_amogus">Amogus</string>
-    <!-- Wi-Fi standard icon -->
-    <string name="status_bar_wifi_standard_icon_title">Wi-Fi standard</string>
-    <string name="status_bar_wifi_standard_icon_summary">Display Wi-Fi standard next the Wi-Fi icon</string>
     <!-- Statusbar Padding -->
     <string name="statusbar_extra_padding_category">Extra padding</string>
     <string name="statusbar_extra_padding_start_title">Start padding</string>
@@ -386,6 +384,8 @@
     <!-- Data Usage -->
     <string name="quick_settings_data_usage_title">Data usage</string>
     <string name="quick_settings_data_usage_summary">Display data usage summary in quick settings footer</string>
+    <string name="qs_show_data_usage_title">Show data usage in tiles</string>
+    <string name="qs_show_data_usage_summary">Display data usage information in WiFi and Cellular Quick Settings tiles</string>
     <!-- Brightness slider haptic feedback -->
     <string name="qs_brightness_slider_haptic_title">Haptic feedback</string>
     <string name="qs_brightness_slider_haptic_summary">Provide haptic feedback on changing brightness using slider</string>
@@ -473,6 +473,7 @@
     <string name="hardware_keys_action_play_pause_music">Play/pause music playback</string>
     <string name="hardware_keys_action_torch">Toggle torch</string>
     <string name="hardware_keys_action_screenshot">Take screenshot</string>
+    <string name="hardware_keys_action_partial_screenshot">Take partial screenshot</string>
     <string name="hardware_keys_action_volume_panel">Toggle volume panel</string>
     <string name="hardware_keys_action_clear_all_notifications">Clear all notifications</string>
     <string name="hardware_keys_action_notifications_panel">Toggle notifications panel</string>
@@ -848,6 +849,27 @@ sensors are subject to hardware compatibility. Enabling sensors for ambient disp
     <string name="monet_engine_style_rainbow">Rainbow</string>
     <string name="monet_engine_style_fruit_salad">Fruit Salad</string>
     <string name="monet_engine_style_monochromatic">Monochromatic</string>
+    <!-- Per-palette chroma override -->
+    <string name="chroma_accent1_title">Primary chroma</string>
+    <string name="chroma_accent2_title">Secondary chroma</string>
+    <string name="chroma_accent3_title">Tertiary chroma</string>
+    <string name="chroma_neutral1_title">Neutral chroma</string>
+    <string name="chroma_neutral2_title">Neutral variant chroma</string>
+    <!-- Hue / tone category -->
+    <string name="hue_tone_settings_category">Hue &amp; lightness</string>
+    <!-- Hue rotation -->
+    <string name="hue_shift_title">Hue rotation</string>
+    <string name="hue_shift_desc">Rotate the seed color hue. Produces harmonious adjacent hues without changing your seed color manually.</string>
+    <!-- Tone shifts -->
+    <string name="tone_shift_light_title">Lightness bias (light mode)</string>
+    <string name="tone_shift_light_desc">Shift all light-mode colors lighter (+) or darker (−) independent of contrast.</string>
+    <string name="tone_shift_dark_title">Lightness bias (dark mode)</string>
+    <string name="tone_shift_dark_desc">Shift all dark-mode colors lighter (+) or darker (−) independent of contrast.</string>
+    <!-- Secondary seed -->
+    <string name="secondary_seed_category">Secondary seed color</string>
+    <string name="use_secondary_seed_title">Enable secondary seed</string>
+    <string name="use_secondary_seed_desc">Drive secondary and tertiary palettes from a separate seed color for two-tone theming.</string>
+    <string name="secondary_seed_color_title">Secondary seed color</string>
     <!-- Wallpaper Styles -->
     <string name="wallpaper_settings_category">Wallpaper styles</string>
     <string name="wallpaper_settings_title">Wallpaper styles</string>
@@ -961,13 +983,6 @@ sensors are subject to hardware compatibility. Enabling sensors for ambient disp
     <string name="hide_applist_summary">Prevent apps from checking selected apps from appslist</string>
     <string name="menu_show_overlay">Show overlay</string>
     <string name="menu_hide_overlay">Hide overlay</string>
-    <!-- Wifi Icon Styles -->
-    <string name="wifi_icon_style_title">Wi-Fi icon style</string>
-    <string name="wifi_icon_style1">Aurora</string>
-    <string name="wifi_icon_style2">Xperia</string>
-    <string name="wifi_icon_style3">Linear</string>
-    <string name="wifi_icon_style4">Nothing Dot</string>
-    <string name="wifi_icon_style5">ZigZag</string>
     <!-- Navbar Styles -->
     <string name="theme_customization_navbar_title">Navbar style</string>
     <string name="theme_customization_navbar_summary">Set custom navigation bar style</string>
@@ -975,11 +990,10 @@ sensors are subject to hardware compatibility. Enabling sensors for ambient disp
     <string name="quickswitch_launcher_title">Quick Switch</string>
     <string name="quickswitch_launcher_summary">Switch default launcher</string>
     <string name="wallpaper_overlay_title">Wallpaper overlay</string>
-    <string name="wallpaper_overlay_summary">Enable for Lunaris Launcher, disable for Pixel Launcher</string>
+    <string name="wallpaper_overlay_summary">Enable for Matrixx Launcher, disable for Pixel Launcher</string>
     <string name="quickswitch_not_supported">QuickSwitch is not supported; the system only has one launcher.</string>
     <string name="quickswitch_footer_text">        Notes: \n\n
-        1. External launcher modules/modifications must be adapted to the QuickSwitch structure to function properly. \n\n
-        2. Enable wallpaper overlay for Lunaris Launcher, disable for Pixel Launcher before or after switching to make wallpaper and style working.
+        External launcher modules/modifications must be adapted to the QuickSwitch structure to function properly.
     </string>
     <!-- Shake Gestures -->
     <string name="shake_gestures_enabled_title">Shake Gestures</string>
@@ -1180,6 +1194,7 @@ sensors are subject to hardware compatibility. Enabling sensors for ambient disp
     <string name="lockscreen_widgets_enabled_title">Enable Lockscreen Widgets</string>
     <string name="lockscreen_widgets_enabled_summary">Add widgets to lockscreen</string>
     <string name="lockscreen_display_widgets_title">Device info Widget</string>
+    <string name="lockscreen_widgets_color_mode_title">Info Widget color mode</string>
     <string name="lockscreen_display_widgets_summary">Show device info widget on lockscreen</string>
     <string name="large_widgets_category_title">Big widgets</string>
     <string name="main_custom_widgets1">Big widget 1</string>
@@ -1398,8 +1413,12 @@ sensors are subject to hardware compatibility. Enabling sensors for ambient disp
     <string name="ts_revocation_valid">✓ Valid — not revoked</string>
     <string name="ts_revocation_revoked">✗ Revoked (%s)</string>
     <string name="ts_revocation_suspended">⚠ Suspended (%s)</string>
+    <string name="ts_revocation_soft_banned">Soft-banned (Strong Integrity will fail)</string>
     <string name="ts_revocation_network_error">Could not reach revocation server</string>
     <string name="ts_revocation_error">Check failed: %s</string>
+    <string name="ts_revocation_last_checked">Last checked: %1$s</string>
+    <string name="ts_revocation_tap_to_check">Tap to check revocation status</string>
+    <string name="ts_revocation_not_yet_checked">Status not yet checked — tap to check</string>
     <string name="ts_fetch_keybox">Fetch official keybox</string>
     <string name="ts_fetch_keybox_summary">Download keybox from Matrixx servers</string>
     <string name="ts_fetch_keybox_fetching">Fetching keybox…</string>
@@ -1407,6 +1426,13 @@ sensors are subject to hardware compatibility. Enabling sensors for ambient disp
     <string name="ts_fetch_keybox_failed">Fetch failed: %s</string>
     <string name="ts_fetch_keybox_revoked_refetch">Keybox revoked, fetching a newer one…</string>
     <string name="ts_fetch_keybox_same_file">Keybox is already up to date</string>
+    <string name="ts_fetch_keybox_blocked">Your keybox is valid — no fetch needed</string>
+    <string name="ts_fetch_keybox_last_fetched">Last fetched: %1$s</string>
+    <string name="ts_fetch_keybox_auto_replaced">Keybox automatically replaced with a valid one</string>
+    <string name="ts_fetch_keybox_soft_banned_refetch">Keybox soft-banned, keeping it and attempting to fetch a better one…</string>
+    <string name="ts_fetch_keybox_no_valid_found">No valid keybox available yet, will retry tomorrow</string>
+    <string name="action_generate">Generate</string>
+    <string name="action_merge">Merge</string>
     <!-- Custom clock style -->
     <string name="lockscreen_custom_clock_style_title">Custom clock style</string>
     <string name="lockscreen_custom_clock_style_summary">Configure lock screen clock styles</string>
@@ -1572,4 +1598,13 @@ sensors are subject to hardware compatibility. Enabling sensors for ambient disp
     <string name="doze_peek_title">AOD Peek</string>
     <string name="doze_peek_summary">Show ambient display briefly when the screen turns off</string>
     <string name="doze_peek_duration_title">Peek duration</string>
+    <!-- Themes -->
+    <string name="custom_system_theme_title">Themes store</string>
+    <string name="custom_system_theme_summary">Customize system appearance with themes and icon packs</string>
+    <!-- Statusbar logo color -->
+    <string name="default_string">Default</string>
+    <string name="status_bar_logo_color_title">Color</string>
+    <string name="status_bar_logo_color_default">Default (White)</string>
+    <string name="status_bar_logo_color_accent">Accent</string>
+    <string name="status_bar_logo_color_custom">Custom</string>
 </resources>
