@@ -26,6 +26,7 @@ import android.os.UserHandle;
 import android.provider.Settings;
 import android.text.format.DateFormat;
 import android.view.Menu;
+import android.view.View;
 import android.widget.EditText;
 
 import androidx.preference.ListPreference;
@@ -43,6 +44,7 @@ import java.util.Date;
 
 import lineageos.preference.LineageSystemSettingListPreference;
 import lineageos.providers.LineageSettings;
+import com.matrixx.settings.utils.DeviceUtils;
 
 import com.matrixx.settings.preferences.SystemSettingListPreference;
 
@@ -52,6 +54,7 @@ public class Clock extends SettingsPreferenceFragment
 
     private static final String TAG = "Clock";
 
+    private static final String STATUS_BAR_CLOCK_STYLE = "status_bar_clock";
     private static final String STATUS_BAR_AM_PM = "status_bar_am_pm";
     private static final String CLOCK_DATE_DISPLAY = "status_bar_clock_date_display";
     private static final String CLOCK_DATE_POSITION = "status_bar_clock_date_position";
@@ -62,6 +65,7 @@ public class Clock extends SettingsPreferenceFragment
     private static final int CLOCK_DATE_STYLE_UPPERCASE = 2;
     private static final int CUSTOM_CLOCK_DATE_FORMAT_INDEX = 18;
 
+    private LineageSystemSettingListPreference mStatusBarClock;
     private LineageSystemSettingListPreference mStatusBarAmPm;
     private SystemSettingListPreference mClockDateDisplay;
     private SystemSettingListPreference mClockDatePosition;
@@ -75,6 +79,24 @@ public class Clock extends SettingsPreferenceFragment
         addPreferencesFromResource(R.xml.status_bar_clock);
 
         ContentResolver resolver = getActivity().getContentResolver();
+        Context mContext = getActivity().getApplicationContext();
+
+        mStatusBarClock =
+                (LineageSystemSettingListPreference) findPreference(STATUS_BAR_CLOCK_STYLE);
+
+        // Adjust status bar preferences for RTL
+        if (getResources().getConfiguration().getLayoutDirection() == View.LAYOUT_DIRECTION_RTL) {
+            if (DeviceUtils.hasCenteredCutout(mContext)) {
+                mStatusBarClock.setEntries(R.array.status_bar_clock_position_entries_notch_rtl);
+                mStatusBarClock.setEntryValues(R.array.status_bar_clock_position_values_notch_rtl);
+            } else {
+                mStatusBarClock.setEntries(R.array.status_bar_clock_position_entries_rtl);
+                mStatusBarClock.setEntryValues(R.array.status_bar_clock_position_values_rtl);
+            }
+        } else if (DeviceUtils.hasCenteredCutout(mContext)) {
+            mStatusBarClock.setEntries(R.array.status_bar_clock_position_entries_notch);
+            mStatusBarClock.setEntryValues(R.array.status_bar_clock_position_values_notch);
+        }
 
         mStatusBarAmPm =
                 (LineageSystemSettingListPreference) findPreference(STATUS_BAR_AM_PM);
