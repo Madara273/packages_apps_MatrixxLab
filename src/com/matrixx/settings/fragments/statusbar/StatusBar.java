@@ -33,6 +33,7 @@ import com.android.settingslib.search.SearchIndexable;
 
 import java.util.List;
 
+import lineageos.preference.LineageSystemSettingListPreference;
 import com.matrixx.settings.preferences.SystemSettingSwitchPreference;
 import com.matrixx.settings.utils.DeviceUtils;
 
@@ -41,6 +42,14 @@ public class StatusBar extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
 
     private static final String TAG = "StatusBar";
+    private static final String QUICK_PULLDOWN = "qs_quick_pulldown";
+
+    private static final int PULLDOWN_DIR_NONE = 0;
+    private static final int PULLDOWN_DIR_RIGHT = 1;
+    private static final int PULLDOWN_DIR_LEFT = 2;
+    private static final int PULLDOWN_DIR_ALWAYS = 3;
+
+    private LineageSystemSettingListPreference mQuickPulldown;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -52,13 +61,64 @@ public class StatusBar extends SettingsPreferenceFragment implements
         final PreferenceScreen prefScreen = getPreferenceScreen();
         final Resources resources = context.getResources();
 
+        mQuickPulldown =
+        (LineageSystemSettingListPreference) findPreference(QUICK_PULLDOWN);
+
+        if (mQuickPulldown != null) {
+            mQuickPulldown.setOnPreferenceChangeListener(this);
+            updateQuickPulldownSummary(mQuickPulldown.getIntValue(0));
+
+    // RTL support
+    if (resources.getConfiguration().getLayoutDirection()
+            == android.view.View.LAYOUT_DIRECTION_RTL) {
+        mQuickPulldown.setEntries(
+                R.array.status_bar_quick_qs_pulldown_entries_rtl);
+        mQuickPulldown.setEntryValues(
+                R.array.status_bar_quick_qs_pulldown_values_rtl);
+            }
+        }
+
     }
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         final Context context = getContext();
         final ContentResolver resolver = context.getContentResolver();
+        if (preference == mQuickPulldown) {
+            int value = Integer.parseInt((String) newValue);
+            updateQuickPulldownSummary(value);
+            return true;
+    }
+
         return false;
+    }
+
+    private void updateQuickPulldownSummary(int value) {
+    String summary = "";
+
+    switch (value) {
+        case PULLDOWN_DIR_NONE:
+            summary = getResources().getString(
+                    R.string.status_bar_quick_qs_pulldown_off);
+            break;
+
+        case PULLDOWN_DIR_ALWAYS:
+            summary = getResources().getString(
+                    R.string.status_bar_quick_qs_pulldown_always);
+            break;
+
+        case PULLDOWN_DIR_LEFT:
+        case PULLDOWN_DIR_RIGHT:
+            summary = getResources().getString(
+                    R.string.status_bar_quick_qs_pulldown_summary,
+                    getResources().getString(
+                            value == PULLDOWN_DIR_LEFT
+                                    ? R.string.status_bar_quick_qs_pulldown_summary_left
+                                    : R.string.status_bar_quick_qs_pulldown_summary_right));
+            break;
+        }
+
+        mQuickPulldown.setSummary(summary);
     }
 
     @Override
