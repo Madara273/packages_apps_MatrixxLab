@@ -1803,4 +1803,8 @@ sensors are subject to hardware compatibility. Enabling sensors for ambient disp
     <string name="status_bar_logo_color_default">Default (White)</string>
     <string name="status_bar_logo_color_accent">Accent</string>
     <string name="status_bar_logo_color_custom">Custom</string>
+
+    <!-- Atmosphere Effect -->
+    <string name="atmosphereeffect_settings_title">Atmosphere Effect</string>
+    <string name="atmosphereeffect_settings_summary">Configure effects and animation settings</string>
 </resources>
