@@ -38,22 +38,9 @@
     <string name="lockscreen_options_title_summary">Personalize o relógio e muito mais...</string>
     <string name="ui_title">Recursos de interface</string>
     <!-- About Matrixx -->
-    <string name="about_matrixx">About Matrixx</string>
-    <string name="team_matrixx">Team Matrixx</string>
-    <string name="team_matrixx_desc">Olá! Nós somos o Time Matrixx</string>
-    <string name="devices_summary">Lista de dispositivos oficiais</string>
-    <string name="matrixx_devices_title">Dispositivos oficiais</string>
-    <string name="get_changelogs_title">Últimas mudanças</string>
-    <string name="get_changelogs_summary">Verifique as últimas mudanças</string>
     <string name="about_device_name">Dispositivo</string>
-    <string name="matrixx_source_title">Github</string>
-    <string name="matrixx_source_summary">Nós amamos o código aberto, Confira</string>
-    <string name="matrixx_telegram_title">Matrixx community</string>
-    <string name="matrixx_telegram_summary">Estamos no telegram, acompanhe!</string>
     <string name="matrixx_update_title">Atualizações</string>
     <string name="matrixx_update_summary">Verifique e instale os últimos lançamentos</string>
-    <string name="matrixx_legal">Matrixx legal</string>
-    <string name="matrixx_legal_desc">Legal terms of use</string>
     <!-- Color Picker -->
     <string name="dialog_color_picker">Seletor de cores</string>
     <string name="press_color_to_apply">Pressione a cor abaixo para aplicar</string>

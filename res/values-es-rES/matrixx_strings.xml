@@ -38,22 +38,9 @@
     <string name="lockscreen_options_title_summary">Customize lockscreen clock and many more...</string>
     <string name="ui_title">Interfaz de usuario</string>
     <!-- About Matrixx -->
-    <string name="about_matrixx">Acerca de Matrixx</string>
-    <string name="team_matrixx">Equipo de Matrixx</string>
-    <string name="team_matrixx_desc">Hey! We are Team Matrixx</string>
-    <string name="devices_summary">Lista de dispositivos Oficial</string>
-    <string name="matrixx_devices_title">Dispositivos Oficiales</string>
-    <string name="get_changelogs_title">Últimos cambios</string>
-    <string name="get_changelogs_summary">Comprobar cambios recientes</string>
     <string name="about_device_name">Dispositivo</string>
-    <string name="matrixx_source_title">GitHub</string>
-    <string name="matrixx_source_summary">Nos encanta el código abierto, échanos un vistazo</string>
-    <string name="matrixx_telegram_title">Comunidad de Matrixx</string>
-    <string name="matrixx_telegram_summary">Estamos en telegrama. ¡Únete!</string>
     <string name="matrixx_update_title">Actualizaciones</string>
     <string name="matrixx_update_summary">Buscar y descargar la última actualización</string>
-    <string name="matrixx_legal">Matrixx legal</string>
-    <string name="matrixx_legal_desc">Condiciones legales de uso</string>
     <!-- Color Picker -->
     <string name="dialog_color_picker">Selector de color</string>
     <string name="press_color_to_apply">Presione el color para aplicar</string>

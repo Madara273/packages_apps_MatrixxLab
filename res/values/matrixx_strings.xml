@@ -40,22 +40,9 @@
     <string name="ui_title">User Interface</string>
 
     <!-- About Matrixx -->
-    <string name="about_matrixx">About Matrixx</string>
-    <string name="team_matrixx">Team Matrixx</string>
-    <string name="team_matrixx_desc">Hey! We are Team Matrixx</string>
-    <string name="devices_summary">Official devices list</string>
-    <string name="matrixx_devices_title">Official Devices</string>
-    <string name="get_changelogs_title">Latest changelog</string>
-    <string name="get_changelogs_summary">Check latest changes</string>
     <string name="about_device_name">Device</string>
-    <string name="matrixx_source_title">GitHub</string>
-    <string name="matrixx_source_summary">We love open source, check us out</string>
-    <string name="matrixx_telegram_title">Matrixx community</string>
-    <string name="matrixx_telegram_summary">We are on telegram. Join us!</string>
     <string name="matrixx_update_title">Updates</string>
     <string name="matrixx_update_summary">Check and download latest update</string>
-    <string name="matrixx_legal">Matrixx legal</string>
-    <string name="matrixx_legal_desc">Legal terms of use</string>
 
     <!-- Color Picker -->
     <string name="dialog_color_picker">Color Picker</string>

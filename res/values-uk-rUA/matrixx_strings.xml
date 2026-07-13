@@ -38,22 +38,9 @@
     <string name="lockscreen_options_title_summary">Налаштування годинника екрана блокування та багато іншого...</string>
     <string name="ui_title">Інтерфейс користувача</string>
     <!-- About Matrixx -->
-    <string name="about_matrixx">Про Matrixx</string>
-    <string name="team_matrixx">Команда Matrixx</string>
-    <string name="team_matrixx_desc">Привіт! Ми команда Matrixx</string>
-    <string name="devices_summary">Список офіційно підтримуваних пристроїв</string>
-    <string name="matrixx_devices_title">Офіційні пристрої</string>
-    <string name="get_changelogs_title">Останні зміни</string>
-    <string name="get_changelogs_summary">Переглянути останні зміни</string>
     <string name="about_device_name">Пристрій</string>
-    <string name="matrixx_source_title">GitHub</string>
-    <string name="matrixx_source_summary">Ми любимо відкритий код, завітайте до нас</string>
-    <string name="matrixx_telegram_title">Спільнота Matrixx</string>
-    <string name="matrixx_telegram_summary">Ми є в Telegram. Приєднуйтеся!</string>
     <string name="matrixx_update_title">Оновлення</string>
     <string name="matrixx_update_summary">Перевірити та завантажити останнє оновлення</string>
-    <string name="matrixx_legal">Юридична інформація Matrixx</string>
-    <string name="matrixx_legal_desc">Умови використання</string>
     <!-- Color Picker -->
     <string name="dialog_color_picker">Вибір кольору</string>
     <string name="press_color_to_apply">Натисніть на колір нижче, щоб застосувати</string>

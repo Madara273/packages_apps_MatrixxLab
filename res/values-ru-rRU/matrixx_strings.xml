@@ -38,22 +38,9 @@
     <string name="lockscreen_options_title_summary">Настройте часы на экране блокировки и многое другое...</string>
     <string name="ui_title">Пользовательский интерфейс</string>
     <!-- About Matrixx -->
-    <string name="about_matrixx">Об Matrixx</string>
-    <string name="team_matrixx">Команда Matrixx</string>
-    <string name="team_matrixx_desc">Эй! Мы — команда Matrixx</string>
-    <string name="devices_summary">Официальный список устройств</string>
-    <string name="matrixx_devices_title">Официально поддерживаемые устройства</string>
-    <string name="get_changelogs_title">Последний журнал изменений</string>
-    <string name="get_changelogs_summary">Проверить последние изменения</string>
     <string name="about_device_name">Устройство</string>
-    <string name="matrixx_source_title">GitHub</string>
-    <string name="matrixx_source_summary">Мы любим открытый исходный код, посмотрите его</string>
-    <string name="matrixx_telegram_title">Сообщество Matrixx</string>
-    <string name="matrixx_telegram_summary">Мы в Telegram. Присоединяйтесь!</string>
     <string name="matrixx_update_title">Обновления</string>
     <string name="matrixx_update_summary">Проверить и загрузить последнее обновление</string>
-    <string name="matrixx_legal">Законный Matrixx</string>
-    <string name="matrixx_legal_desc">Юридические условия использования</string>
     <!-- Color Picker -->
     <string name="dialog_color_picker">Цветовая палитра</string>
     <string name="press_color_to_apply">Нажмите на цвет ниже для применения</string>

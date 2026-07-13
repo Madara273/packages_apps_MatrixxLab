@@ -14,58 +14,47 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tenx="http://schemas.android.com/apk/res-auto"
     xmlns:settings="http://schemas.android.com/apk/res-auto"
-    android:title="@string/about_matrixx">
+    android:title="About Matrixx">
 
     <Preference
-        android:title="@string/team_matrixx"
-        android:summary="@string/team_matrixx_desc"
-        android:icon="@drawable/ic_team" >
-    <intent
-        android:action="android.intent.action.VIEW"
-        android:data="https://www.projectmatrixx.com/team" />
-    </Preference>
-
-    <Preference
-        android:title="@string/matrixx_devices_title"
-        android:summary="@string/devices_summary" >
-    <intent
-        android:action="android.intent.action.VIEW"
-        android:data="https://www.projectmatrixx.com/downloads" />
-    </Preference>
-
-    <Preference
-        android:key="matrixx_changelog"
-        android:title="@string/get_changelogs_title"
-        android:summary="@string/get_changelogs_summary">
+        android:key="matrixx_maintainer"
+        android:title="By Madara273"
+        android:summary="Try My Build"
+        android:icon="@drawable/ic_maintainer"
+        android:selectable="true">
         <intent
             android:action="android.intent.action.VIEW"
-            android:data="https://www.projectmatrixx.com/changelog" />
+            android:data="https://t.me/Madara_273c" />
     </Preference>
 
     <Preference
-        android:key="matrixx_source"
-        android:title="@string/matrixx_source_title"
-        android:summary="@string/matrixx_source_summary">
+        android:key="matrixx_github"
+        android:title="View my GitHub"
+        android:summary="github.com/Madara273"
+        settings:allowDividerAbove="true">
         <intent
             android:action="android.intent.action.VIEW"
-            android:data="https://github.com/ProjectMatrixx" />
+            android:data="https://github.com/Madara273?tab=repositories" />
     </Preference>
 
     <Preference
-        android:key="matrixx_telegram"
-        android:title="@string/matrixx_telegram_title"
-        android:summary="@string/matrixx_telegram_summary">
+        android:key="matrixx_license"
+        android:title="Open Source License"
+        settings:allowDividerAbove="true">
         <intent
             android:action="android.intent.action.VIEW"
-            android:data="https://t.me/matrixx_community" />
+            android:data="https://www.apache.org/licenses/LICENSE-2.0" />
     </Preference>
 
     <Preference
-        android:title="@string/matrixx_legal"
-        android:summary="@string/matrixx_legal_desc">
-    <intent
-        android:action="android.intent.action.VIEW"
-        android:data="https://www.projectmatrixx.com/legal" />
+        android:key="matrixx_donate"
+        android:title="Donate"
+        android:summary="Binance ID: 494297309"
+        android:icon="@drawable/ic_donate"
+        settings:allowDividerAbove="true">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:data="https://www.binance.com" />
     </Preference>
-    
+
 </PreferenceScreen>
