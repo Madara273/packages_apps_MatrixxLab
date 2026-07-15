@@ -54,7 +54,7 @@ class TrickyStore : SettingsPreferenceFragment() {
         ) != 0
 
     private val isOfficialBuild: Boolean
-        get() = android.os.SystemProperties.get("ro.lunaris.build.type", "") == "Official"
+        get() = android.os.SystemProperties.get("ro.matrixx.build.type", "") == "Official"
 
     // Guards against autoFetchIfNoKeybox() firing while the user is mid-import.
     private var isKeyboxPickerOpen = false

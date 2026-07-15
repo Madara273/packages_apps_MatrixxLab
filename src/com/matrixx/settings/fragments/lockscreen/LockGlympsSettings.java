@@ -58,7 +58,7 @@ public class LockGlympsSettings extends SettingsPreferenceFragment
     private static final String KEY_CLEAR_CACHE = "lock_glymps_clear_cache";
     private static final String KEY_FOLDER_INFO = "lock_glymps_folder_info";
     
-    private static final String STORAGE_FOLDER = "LunarisGlymps";
+    private static final String STORAGE_FOLDER = "MatrixxGlymps";
     
     private WallpaperPreviewPreference mPreviewPreference;
     private SystemSettingMainSwitchPreference mEnablePreference;

@@ -56,8 +56,8 @@ import org.json.JSONObject;
 public class GithubFontPickerDialog extends Dialog {
 
     private static final String TAG = "GithubFontPickerDialog";
-    private static final String GITHUB_API_URL = "https://api.github.com/repos/Lunaris-CLO/font_prebuilt/contents/fonts?ref=16";
-    private static final String GITHUB_RAW_URL = "https://raw.githubusercontent.com/Lunaris-CLO/font_prebuilt/16/fonts/";
+    private static final String GITHUB_API_URL = "https://api.github.com/repos/Matrixx-CLO/font_prebuilt/contents/fonts?ref=16";
+    private static final String GITHUB_RAW_URL = "https://raw.githubusercontent.com/Matrixx-CLO/font_prebuilt/16/fonts/";
 
     public interface OnFontSelectedListener {
         void onFontInstalled(String fontName);
@@ -77,7 +77,7 @@ public class GithubFontPickerDialog extends Dialog {
         mFontInstaller = new ExternalFontInstaller(context);
         
         File sdcard = android.os.Environment.getExternalStorageDirectory();
-        mFontsDirectory = new File(sdcard, "LunarisFont");
+        mFontsDirectory = new File(sdcard, "MatrixxFont");
 
         if (!mFontsDirectory.exists()) {
             boolean created = mFontsDirectory.mkdirs();
@@ -126,7 +126,7 @@ public class GithubFontPickerDialog extends Dialog {
                 HttpURLConnection connection = (HttpURLConnection) url.openConnection();
                 connection.setRequestMethod("GET");
                 connection.setRequestProperty("Accept", "application/vnd.github.v3+json");
-                connection.setRequestProperty("User-Agent", "Lunaris-Font-Installer");
+                connection.setRequestProperty("User-Agent", "Matrixx-Font-Installer");
                 connection.setConnectTimeout(15000);
                 connection.setReadTimeout(15000);
 
@@ -360,7 +360,7 @@ public class GithubFontPickerDialog extends Dialog {
         connection.setRequestMethod("GET");
         connection.setConnectTimeout(15000);
         connection.setReadTimeout(15000);
-        connection.setRequestProperty("User-Agent", "Lunaris-Font-Installer");
+        connection.setRequestProperty("User-Agent", "Matrixx-Font-Installer");
         
         int responseCode = connection.getResponseCode();
         if (responseCode != HttpURLConnection.HTTP_OK) {

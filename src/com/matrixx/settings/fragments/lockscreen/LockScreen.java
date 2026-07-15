@@ -52,7 +52,7 @@ public class LockScreen extends SettingsPreferenceFragment
     private static final String KEY_SMARTSPACE = "lockscreen_smartspace_enabled";
     private static final String KEY_WEATHER = "lockscreen_weather_enabled";
     private static final String KEY_KG_USER_SWITCHER = "kg_user_switcher_enabled";
-    private static final String LUNARIS_UDFPS_CUSTOM_CATEGORY = "lockscreen_custom_category";
+    private static final String MATRIXX_UDFPS_CUSTOM_CATEGORY = "lockscreen_custom_category";
 
     private static final String KEY_FP_SUCCESS = "fp_success_vibrate";
     private static final String KEY_FP_ERROR = "fp_error_vibrate";
@@ -77,7 +77,7 @@ public class LockScreen extends SettingsPreferenceFragment
         final Context context = getContext();
 
         PreferenceCategory gestCategory = (PreferenceCategory) findPreference(LOCKSCREEN_GESTURES_CATEGORY);
-        PreferenceCategory lunarisUdfpsCategory = (PreferenceCategory) findPreference(LUNARIS_UDFPS_CUSTOM_CATEGORY);
+        PreferenceCategory matrixxUdfpsCategory = (PreferenceCategory) findPreference(MATRIXX_UDFPS_CUSTOM_CATEGORY);
 
         mFpSuccessVib = findPreference(KEY_FP_SUCCESS);
         mFpErrorVib = findPreference(KEY_FP_ERROR);
@@ -88,8 +88,8 @@ public class LockScreen extends SettingsPreferenceFragment
             gestCategory.removePreference(mRippleEffect);
         }
 
-        if (lunarisUdfpsCategory != null && !SystemProperties.getBoolean(PROP_CUSTOM_UDFPS, false)) {
-            getPreferenceScreen().removePreference(lunarisUdfpsCategory);
+        if (matrixxUdfpsCategory != null && !SystemProperties.getBoolean(PROP_CUSTOM_UDFPS, false)) {
+            getPreferenceScreen().removePreference(matrixxUdfpsCategory);
         }
 
         boolean hapticAvailable = DeviceUtils.hasVibrator(context);
@@ -168,7 +168,7 @@ public class LockScreen extends SettingsPreferenceFragment
                         keys.add(KEY_RIPPLE_EFFECT);
                     }
                     if (!SystemProperties.getBoolean(PROP_CUSTOM_UDFPS, false)) {
-                        keys.add(LUNARIS_UDFPS_CUSTOM_CATEGORY);
+                        keys.add(MATRIXX_UDFPS_CUSTOM_CATEGORY);
                     }
                     boolean hapticAvailable = DeviceUtils.hasVibrator(context);
                     if (!hasFingerprint || !hapticAvailable) {

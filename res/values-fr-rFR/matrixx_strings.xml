@@ -978,11 +978,11 @@ sensors are subject to hardware compatibility. Enabling sensors for ambient disp
     <string name="quickswitch_launcher_title">Quick Switch</string>
     <string name="quickswitch_launcher_summary">Switch default launcher</string>
     <string name="wallpaper_overlay_title">Wallpaper overlay</string>
-    <string name="wallpaper_overlay_summary">Enable for Lunaris Launcher, disable for Pixel Launcher</string>
+    <string name="wallpaper_overlay_summary">Enable for Matrixx Launcher, disable for Pixel Launcher</string>
     <string name="quickswitch_not_supported">QuickSwitch is not supported; the system only has one launcher.</string>
     <string name="quickswitch_footer_text">        Notes: \n\n
         1. Les modules/modifications du lanceur externe doivent être adaptés à la structure QuickSwitch pour fonctionner correctement. \n\n
-        2. Activer l\'overlay des fonds d\'écran pour Lunaris Launcher, désactiver pour Pixel Launcher avant ou après le changement pour faire fonctionner le fond d\'écran et le style.
+        2. Activer l\'overlay des fonds d\'écran pour Matrixx Launcher, désactiver pour Pixel Launcher avant ou après le changement pour faire fonctionner le fond d\'écran et le style.
     </string>
     <!-- Shake Gestures -->
     <string name="shake_gestures_enabled_title">Shake Gestures</string>

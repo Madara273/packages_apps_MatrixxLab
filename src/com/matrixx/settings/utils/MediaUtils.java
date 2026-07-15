@@ -144,7 +144,7 @@ public class MediaUtils {
             }
         }
 
-        File directory = new File("/sdcard/Lunaris-OS/Wallpapers");
+        File directory = new File("/sdcard/Matrixx-OS/Wallpapers");
         if (!directory.exists()) {
             Log.d(TAG, "Wallpaper directory does not exist");
             return null;

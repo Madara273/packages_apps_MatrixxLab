@@ -964,11 +964,11 @@
     <string name="quickswitch_launcher_title">Quick Switch</string>
     <string name="quickswitch_launcher_summary">Змінити стандартний лаунчер</string>
     <string name="wallpaper_overlay_title">Накладення шпалер</string>
-    <string name="wallpaper_overlay_summary">Увімкнути для Lunaris Launcher, вимкнути для Pixel Launcher</string>
+    <string name="wallpaper_overlay_summary">Увімкнути для Matrixx Launcher, вимкнути для Pixel Launcher</string>
     <string name="quickswitch_not_supported">QuickSwitch не підтримується; у системі лише один лаунчер.</string>
     <string name="quickswitch_footer_text">        Примітки:\n\n
         1. Зовнішні лаунчери/моди повинні бути адаптовані до структури QuickSwitch.\n\n
-        2. Увімкніть накладення шпалер для Lunaris Launcher, вимкніть для Pixel Launcher перед або після перемикання для коректної роботи шпалер і стилів.
+        2. Увімкніть накладення шпалер для Matrixx Launcher, вимкніть для Pixel Launcher перед або після перемикання для коректної роботи шпалер і стилів.
     </string>
     <!-- Shake Gestures -->
     <string name="shake_gestures_enabled_title">Жести струшування</string>
