@@ -14,12 +14,14 @@
         android:layout_marginTop="12dp"
         android:layout_marginBottom="10dp"
         android:layout_weight="1">
+
         <!-- System Themes -->
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1.5"
             android:orientation="vertical">
+
             <RelativeLayout
                 android:id="@+id/system_themes"
                 android:layout_width="match_parent"
@@ -33,22 +35,25 @@
                 android:clickable="true"
                 android:clipChildren="true"
                 android:clipToPadding="true"
-                android:clipToOutline="true">   
-            <com.airbnb.lottie.LottieAnimationView
-                android:id="@+id/theme_colors_animation"
-                android:alpha="0.8"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:scaleType="centerCrop"
-                app:lottie_autoPlay="true"
-                app:lottie_loop="true"
-                app:lottie_rawRes="@raw/rattan"/>
-                 <View
+                android:clipToOutline="true">
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/theme_colors_animation"
+                    android:alpha="0.8"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:scaleType="centerCrop"
+                    app:lottie_autoPlay="true"
+                    app:lottie_loop="true"
+                    app:lottie_rawRes="@raw/rattan"/>
+
+                <View
                     android:id="@+id/system_themes_divider"
                     android:layout_width="2dp"
                     android:layout_height="2dp"
                     android:layout_centerInParent="true" />
+
                 <TextView
                     android:textSize="18sp"
                     android:textColor="@color/matrixx_text_color_primary"
@@ -60,6 +65,7 @@
                     android:layout_marginStart="20dp"
                     android:layout_marginTop="6dp"
                     style="@style/matrixx_text_style_h6" />
+
                 <TextView
                     android:textSize="11.5sp"
                     android:textColor="@color/matrixx_text_color_secondary"
@@ -71,7 +77,9 @@
                     android:layout_marginTop="2dp"
                     android:layout_marginStart="20dp"
                     style="@style/matrixx_text_style_h6" />
+
             </RelativeLayout>
+
             <RelativeLayout
                 android:id="@+id/toolbox"
                 android:layout_width="match_parent"
@@ -86,21 +94,24 @@
                 android:clipChildren="true"
                 android:clipToPadding="true"
                 android:clipToOutline="true">
-            <com.airbnb.lottie.LottieAnimationView
-                android:id="@+id/toolbox_colors_animation"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:scaleType="centerCrop"
-                android:alpha="0.5"
-                app:lottie_autoPlay="true"
-                app:lottie_loop="true"
-                app:lottie_rawRes="@raw/fallen"/>
-                 <View
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/toolbox_colors_animation"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:scaleType="centerCrop"
+                    android:alpha="0.5"
+                    app:lottie_autoPlay="true"
+                    app:lottie_loop="true"
+                    app:lottie_rawRes="@raw/fallen"/>
+
+                <View
                     android:id="@+id/toolbox_divider"
                     android:layout_width="2dp"
                     android:layout_height="2dp"
                     android:layout_centerInParent="true" />
+
                 <TextView
                     android:textSize="18sp"
                     android:textColor="@color/matrixx_text_color_primary"
@@ -112,6 +123,7 @@
                     android:layout_marginStart="20dp"
                     android:layout_marginTop="6dp"
                     style="@style/matrixx_text_style_h6" />
+
                 <TextView
                     android:textSize="11.5sp"
                     android:textColor="@color/matrixx_text_color_secondary"
@@ -123,8 +135,11 @@
                     android:layout_below="@+id/qs_panel_options_title"
                     android:layout_marginStart="20dp"
                     style="@style/matrixx_text_style_h6" />
+
             </RelativeLayout>
+
         </LinearLayout>
+
         <!-- Wallpapaper and Themes -->
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/themes_card"
@@ -184,7 +199,7 @@
                     android:textFontWeight="300"
                     android:layout_centerHorizontal="true" 
                     style="@style/matrixx_text_style_h6" />
-                    
+
                 <ImageView
                     android:id="@+id/lock_icon"
                     android:layout_width="18dp"
@@ -201,24 +216,28 @@
             </RelativeLayout>
 
         </com.google.android.material.card.MaterialCardView>
+
     </LinearLayout>
+
     <LinearLayout
         android:id="@+id/clock_face_container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
+
         <RelativeLayout
             android:id="@+id/clock_face"
             android:layout_width="match_parent"
             android:layout_height="110dp"
             android:background="@drawable/custom_preference_background"
-            android:layout_marginBottom="20dp"
+            android:layout_marginBottom="8dp"
             android:layout_marginStart="0dp"
             android:layout_marginEnd="0dp"
             android:clickable="true"
             android:clipChildren="true"
             android:clipToPadding="true"
             android:clipToOutline="true">
+
             <TextView
                 android:id="@+id/clock_face_title"
                 android:layout_width="wrap_content"
@@ -230,6 +249,7 @@
                 android:textSize="18sp"
                 android:textColor="@color/matrixx_text_color_primary"
                 style="@style/matrixx_text_style_h6" />
+
             <TextView
                 android:id="@+id/clock_face_summary"
                 android:layout_width="match_parent"
@@ -243,49 +263,57 @@
                 android:textSize="13sp"
                 android:textColor="@color/matrixx_text_color_secondary"
                 style="@style/matrixx_text_style_h6" />
-                <com.google.android.material.card.MaterialCardView
-                    android:id="@+id/clock_face_icon"
-                    android:layout_width="60dp"
-                    android:layout_height="80dp"
-                    android:background="@*android:color/transparent"
-                    android:clickable="false"
-                    android:layout_alignParentEnd="true"
-                    android:layout_centerVertical="true"
-                    android:layout_marginEnd="16dp"
-                    android:clipToOutline="true"
-                    app:cardCornerRadius="5dp"
-                    app:cardElevation="0dp">
-                    <com.matrixx.settings.utils.WallpaperView
-                        android:gravity="center"
-                        android:orientation="horizontal"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:scaleType="centerCrop"
-                        android:contentDescription="@null"
-                        android:foreground="@drawable/wallpaper_scrim"
-                        android:background="@drawable/wallpaper_scrim"
-                        android:elevation="0dp" />
-                    <RelativeLayout
-                        android:id="@+id/clock_face_clock_frame"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:gravity="center">
-                        <TextClock
-                            android:id="@+id/clock_face_clock_preview"
-                            android:textSize="28sp"
-                            android:textColor="@*android:color/system_accent1_100"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:format12Hour="hh\nmm"
-                            android:format24Hour="hh\nmm"
-                            android:fontFamily="@*android:string/config_clockFontFamily"
-                            android:textFontWeight="300"
-                            android:textAlignment="center"
-                            android:layout_centerHorizontal="true" 
-                            style="@style/matrixx_text_style_h6" />
-                    </RelativeLayout>
-                </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/clock_face_icon"
+                android:layout_width="60dp"
+                android:layout_height="80dp"
+                android:background="@*android:color/transparent"
+                android:clickable="false"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="16dp"
+                android:clipToOutline="true"
+                app:cardCornerRadius="5dp"
+                app:cardElevation="0dp">
+
+                <com.matrixx.settings.utils.WallpaperView
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:contentDescription="@null"
+                    android:foreground="@drawable/wallpaper_scrim"
+                    android:background="@drawable/wallpaper_scrim"
+                    android:elevation="0dp" />
+
+                <RelativeLayout
+                    android:id="@+id/clock_face_clock_frame"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center">
+
+                    <TextClock
+                        android:id="@+id/clock_face_clock_preview"
+                        android:textSize="28sp"
+                        android:textColor="@*android:color/system_accent1_100"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:format12Hour="hh\nmm"
+                        android:format24Hour="hh\nmm"
+                        android:fontFamily="@*android:string/config_clockFontFamily"
+                        android:textFontWeight="300"
+                        android:textAlignment="center"
+                        android:layout_centerHorizontal="true" 
+                        style="@style/matrixx_text_style_h6" />
+
+                </RelativeLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
         </RelativeLayout>
+
     </LinearLayout>
 
     <LinearLayout
@@ -293,18 +321,20 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
+
         <RelativeLayout
             android:id="@+id/spoof"
             android:layout_width="match_parent"
             android:layout_height="110dp"
             android:background="@drawable/custom_preference_background"
-            android:layout_marginBottom="20dp"
+            android:layout_marginBottom="10dp"
             android:layout_marginStart="0dp"
             android:layout_marginEnd="0dp"
             android:clickable="true"
             android:clipChildren="true"
             android:clipToPadding="true"
             android:clipToOutline="true">
+
             <TextView
                 android:id="@+id/spoof_title"
                 android:layout_width="wrap_content"
@@ -316,6 +346,7 @@
                 android:textSize="18sp"
                 android:textColor="@color/matrixx_text_color_primary"
                 style="@style/matrixx_text_style_h6" />
+
             <TextView
                 android:id="@+id/spoof_summary"
                 android:layout_width="match_parent"
@@ -329,244 +360,286 @@
                 android:textSize="13sp"
                 android:textColor="@color/matrixx_text_color_secondary"
                 style="@style/matrixx_text_style_h6" />
-                <RelativeLayout
-                    android:id="@+id/spoof_icon"
-                    android:layout_width="65dp"
-                    android:layout_height="80dp"
-                    android:background="@*android:color/transparent"
-                    android:clickable="false"
-                    android:layout_alignParentEnd="true"
-                    android:layout_centerVertical="true"
-                    android:layout_marginEnd="16dp"
-                    android:clipToOutline="true"
-                    app:cardCornerRadius="5dp"
-                    app:cardElevation="0dp">
-                    <com.airbnb.lottie.LottieAnimationView
-                        android:id="@+id/spoof_colors_animation"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_gravity="center"
-                        android:scaleType="centerCrop"
-                        app:lottie_autoPlay="true"
-                        app:lottie_loop="true"
-                        app:lottie_rawRes="@raw/amber"/>
-                </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/spoof_icon"
+                android:layout_width="65dp"
+                android:layout_height="80dp"
+                android:background="@*android:color/transparent"
+                android:clickable="false"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="16dp"
+                android:clipToOutline="true"
+                app:cardCornerRadius="5dp"
+                app:cardElevation="0dp">
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/spoof_colors_animation"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:scaleType="centerCrop"
+                    app:lottie_autoPlay="true"
+                    app:lottie_loop="true"
+                    app:lottie_rawRes="@raw/amber"/>
+
+            </RelativeLayout>
+
         </RelativeLayout>
+
     </LinearLayout>
-    
-    <LinearLayout
-    android:id="@+id/colors_font"
-    android:layout_width="wrap_content"
-    android:layout_height="match_parent"
-    android:orientation="horizontal">
-
-    <RelativeLayout
-        android:id="@+id/bottom_options"
-        android:layout_width="0dp"
-        android:layout_height="85dp"
-        android:layout_weight="1"
-        android:layout_marginStart="0dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="10dp"
-        android:background="@drawable/custom_preference_background"
-        android:clickable="true"
-        android:clipChildren="true"
-        android:clipToPadding="true"
-        android:clipToOutline="true">
-
-        <com.airbnb.lottie.LottieAnimationView
-            android:id="@+id/bottom_options_animation"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:scaleType="centerCrop"
-            android:alpha="0.5"
-            app:lottie_autoPlay="true"
-            app:lottie_loop="true"
-            app:lottie_rawRes="@raw/neuro" />
-
-        <TextView
-            android:id="@+id/bottom_options_title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_marginBottom="4dp"
-            android:layout_centerVertical="true"
-            android:textSize="18sp"
-            android:textColor="@color/matrixx_text_color_primary"
-            android:text="@string/sound_options_title"
-            style="@style/matrixx_text_style_h6" />
-
-        <TextView
-            android:id="@+id/bottom_options_summary"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/bottom_options_title"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="4dp"
-            android:textSize="11.5sp"
-            android:textColor="@color/matrixx_text_color_secondary"
-            android:text="@string/sound_options_title_summary"
-            style="@style/matrixx_text_style_h6" />
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:id="@+id/statusbar"
-        android:layout_width="0dp"
-        android:layout_height="85dp"
-        android:layout_weight="1"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="0dp"
-        android:layout_marginBottom="10dp"
-        android:background="@drawable/custom_preference_background"
-        android:clickable="true"
-        android:clipChildren="true"
-        android:clipToPadding="true"
-        android:clipToOutline="true">
-
-        <com.airbnb.lottie.LottieAnimationView
-            android:id="@+id/statusbar_animation"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:scaleType="centerCrop"
-            android:alpha="0.5"
-            app:lottie_autoPlay="true"
-            app:lottie_loop="true"
-            app:lottie_rawRes="@raw/loop" />
-
-        <TextView
-            android:id="@+id/statusbar_title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_marginBottom="4dp"
-            android:layout_centerVertical="true"
-            android:textSize="18sp"
-            android:textColor="@color/matrixx_text_color_primary"
-            android:text="@string/notifications_options_title"
-            style="@style/matrixx_text_style_h6" />
-
-        <TextView
-            android:id="@+id/statusbar_summary"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/statusbar_title"
-            android:gravity="center"
-            android:layout_marginTop="4dp"
-            android:textSize="11.5sp"
-            android:textColor="@color/matrixx_text_color_secondary"
-            android:text="@string/notifications_options_summary"
-            style="@style/matrixx_text_style_h6" />
-    </RelativeLayout>
-</LinearLayout>
 
     <LinearLayout
-    android:id="@+id/colors_font"
-    android:layout_width="wrap_content"
-    android:layout_height="match_parent"
-    android:orientation="horizontal">
+        android:id="@+id/colors_font"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
 
+        <RelativeLayout
+            android:id="@+id/bottom_options"
+            android:layout_width="0dp"
+            android:layout_height="85dp"
+            android:layout_weight="1"
+            android:layout_marginStart="0dp"
+            android:layout_marginEnd="6dp"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/custom_preference_background"
+            android:clickable="true"
+            android:clipChildren="true"
+            android:clipToPadding="true"
+            android:clipToOutline="true">
 
-    <RelativeLayout
-        android:id="@+id/button_options"
-        android:layout_width="0dp"
-        android:layout_height="85dp"
-        android:layout_weight="1"
-        android:layout_marginStart="0dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="10dp"
-        android:background="@drawable/custom_preference_background"
-        android:clickable="true"
-        android:clipChildren="true"
-        android:clipToPadding="true"
-        android:clipToOutline="true">
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/bottom_options_animation"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:scaleType="centerCrop"
+                android:alpha="0.5"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/neuro" />
 
-        <com.airbnb.lottie.LottieAnimationView
-            android:id="@+id/button_options_animation"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:scaleType="centerCrop"
-            android:alpha="0.5"
-            app:lottie_autoPlay="true"
-            app:lottie_loop="true"
-            app:lottie_rawRes="@raw/button" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp">
 
-        <TextView
-            android:id="@+id/button_options_title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_marginBottom="4dp"
-            android:layout_centerVertical="true"
-            android:textSize="18sp"
-            android:textColor="@color/matrixx_text_color_primary"
-            android:text="@string/button_options_title"
-            style="@style/matrixx_text_style_h6" />
+                <TextView
+                    android:id="@+id/bottom_options_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:textColor="@color/matrixx_text_color_primary"
+                    android:text="@string/sound_options_title"
+                    style="@style/matrixx_text_style_h6" />
 
-        <TextView
-            android:id="@+id/button_options_summary"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/button_options_title"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="4dp"
-            android:textSize="11.5sp"
-            android:textColor="@color/matrixx_text_color_secondary"
-            android:text="@string/button_options_summary"
-            style="@style/matrixx_text_style_h6" />
-    </RelativeLayout>
+                <TextView
+                    android:id="@+id/bottom_options_summary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:textSize="11sp"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:textColor="@color/matrixx_text_color_secondary"
+                    android:text="@string/sound_options_title_summary"
+                    style="@style/matrixx_text_style_h6" />
 
-    <RelativeLayout
-        android:id="@+id/about"
-        android:layout_width="0dp"
-        android:layout_height="85dp"
-        android:layout_weight="1"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="0dp"
-        android:layout_marginBottom="10dp"
-        android:background="@drawable/custom_preference_background"
-        android:clickable="true"
-        android:clipChildren="true"
-        android:clipToPadding="true"
-        android:clipToOutline="true">
+            </LinearLayout>
 
-        <com.airbnb.lottie.LottieAnimationView
-            android:id="@+id/about_animation"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:scaleType="centerCrop"
-            android:alpha="0.5"
-            app:lottie_autoPlay="true"
-            app:lottie_loop="true"
-            app:lottie_rawRes="@raw/ai" />
+        </RelativeLayout>
 
-        <TextView
-            android:id="@+id/about_title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_marginBottom="4dp"
-            android:layout_centerVertical="true"
-            android:textSize="18sp"
-            android:textColor="@color/matrixx_text_color_primary"
-            android:text="@string/about_options_title"
-            style="@style/matrixx_text_style_h6" />
+        <RelativeLayout
+            android:id="@+id/statusbar"
+            android:layout_width="0dp"
+            android:layout_height="85dp"
+            android:layout_weight="1"
+            android:layout_marginStart="6dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/custom_preference_background"
+            android:clickable="true"
+            android:clipChildren="true"
+            android:clipToPadding="true"
+            android:clipToOutline="true">
 
-        <TextView
-            android:id="@+id/about_summary"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/about_title"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="4dp"
-            android:textSize="11.5sp"
-            android:textColor="@color/matrixx_text_color_secondary"
-            android:text="@string/about_options_summary"
-            style="@style/matrixx_text_style_h6" />
-    </RelativeLayout>
-</LinearLayout>
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/statusbar_animation"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:scaleType="centerCrop"
+                android:alpha="0.5"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/loop" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp">
+
+                <TextView
+                    android:id="@+id/statusbar_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:textColor="@color/matrixx_text_color_primary"
+                    android:text="@string/notifications_options_title"
+                    style="@style/matrixx_text_style_h6" />
+
+                <TextView
+                    android:id="@+id/statusbar_summary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:textSize="11sp"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:textColor="@color/matrixx_text_color_secondary"
+                    android:text="@string/notifications_options_summary"
+                    style="@style/matrixx_text_style_h6" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/colors_font_second"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/button_options"
+            android:layout_width="0dp"
+            android:layout_height="85dp"
+            android:layout_weight="1"
+            android:layout_marginStart="0dp"
+            android:layout_marginEnd="6dp"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/custom_preference_background"
+            android:clickable="true"
+            android:clipChildren="true"
+            android:clipToPadding="true"
+            android:clipToOutline="true">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/button_options_animation"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:scaleType="centerCrop"
+                android:alpha="0.5"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/button" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp">
+
+                <TextView
+                    android:id="@+id/button_options_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:textColor="@color/matrixx_text_color_primary"
+                    android:text="@string/button_options_title"
+                    style="@style/matrixx_text_style_h6" />
+
+                <TextView
+                    android:id="@+id/button_options_summary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:textSize="11sp"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:textColor="@color/matrixx_text_color_secondary"
+                    android:text="@string/button_options_summary"
+                    style="@style/matrixx_text_style_h6" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/about"
+            android:layout_width="0dp"
+            android:layout_height="85dp"
+            android:layout_weight="1"
+            android:layout_marginStart="6dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/custom_preference_background"
+            android:clickable="true"
+            android:clipChildren="true"
+            android:clipToPadding="true"
+            android:clipToOutline="true">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/about_animation"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:scaleType="centerCrop"
+                android:alpha="0.5"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/ai" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp">
+
+                <TextView
+                    android:id="@+id/about_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:textColor="@color/matrixx_text_color_primary"
+                    android:text="@string/about_options_title"
+                    style="@style/matrixx_text_style_h6" />
+
+                <TextView
+                    android:id="@+id/about_summary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:textSize="11sp"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:textColor="@color/matrixx_text_color_secondary"
+                    android:text="@string/about_options_summary"
+                    style="@style/matrixx_text_style_h6" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
 
 </LinearLayout>
