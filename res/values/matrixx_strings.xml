@@ -862,6 +862,8 @@ sensors are subject to hardware compatibility. Enabling sensors for ambient disp
     <string name="nowplaying_compact_style_title">Compact style</string>
     <string name="nowplaying_compact_style_summary">Show as on a single line using the track text size</string>
     <string name="nowplaying_info_summary">Now Playing displays the currently playing music title and artist on your lockscreen and Always-On Display. It automatically appears when music is playing and disappears when stopped. The position can be adjusted to appear anywhere from the top to bottom of the screen.</string>
+    <string name="nowplaying_lyrics_mode_title">Lyrics mode</string>
+    <string name="nowplaying_lyrics_mode_summary">Show synced lyrics instead of track title and icon</string>
 
     <!-- Compact QS Media Player-->
     <string name="qs_compact_media_player_mode_title">Compact QS media player</string>
@@ -1796,4 +1798,12 @@ sensors are subject to hardware compatibility. Enabling sensors for ambient disp
     <!-- Atmosphere Effect -->
     <string name="atmosphereeffect_settings_title">Atmosphere Effect</string>
     <string name="atmosphereeffect_settings_summary">Configure effects and animation settings</string>
+
+    <!-- Statusbar lyric -->
+    <string name="status_bar_lyric_title">Status bar lyric</string>
+    <string name="status_bar_lyric_summary">Show lyric in status bar (need app support)</string>
+    <string name="status_bar_show_lyric_title">Enable status bar lyric</string>
+    <string name="status_bar_lyric_options_title">Options</string>
+    <string name="disguise_props_for_music_app_title">Disguise device for music apps</string>
+    <string name="disguise_props_for_music_app_summary">Disguise device in some music applications for support status bar lyric. After changing this toggle, you have to restart applications for the change to take effect.</string>
 </resources>
