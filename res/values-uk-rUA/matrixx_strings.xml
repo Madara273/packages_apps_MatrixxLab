@@ -1560,4 +1560,20 @@
     <string name="doze_peek_title">AOD Peek</string>
     <string name="doze_peek_summary">Коротко показати always-on display при вимкненні екрана</string>
     <string name="doze_peek_duration_title">Тривалість показу</string>
+    <!-- Statusbar lyric -->
+    <string name="status_bar_lyric_title">Текст пісні в рядку стану</string>
+    <string name="status_bar_lyric_summary">Відображати текст пісні в рядку стану (потрібна підтримка додатком)</string>
+    <string name="status_bar_show_lyric_title">Увімкнути текст пісні в рядку стану</string>
+    <string name="status_bar_lyric_options_title">Параметри</string>
+    <string name="disguise_props_for_music_app_title">Маскувати пристрій для музичних додатків</string>
+    <string name="disguise_props_for_music_app_summary">Маскувати пристрій у деяких музичних додатках для підтримки тексту пісні в рядку стану. Після зміни цього перемикача необхідно перезапустити додатки, щоб зміни набрали чинності.</string>
+    <!-- Lyrics mode (Now Playing) -->
+    <string name="nowplaying_lyrics_mode_title">Режим тексту пісні</string>
+    <string name="nowplaying_lyrics_mode_summary">Показувати синхронізований текст пісні замість назви треку та іконки</string>
+     <!-- Hide screen capture status -->
+    <string name="hide_screen_capture_status_title">Приховати статус захоплення екрана</string>
+    <string name="hide_screen_capture_status_summary">Приховати статус захоплення та запису екрана від усіх додатків. Це може бути зручно в деяких випадках, але може призвести до витоку конфіденційних даних.</string>
+    <!-- Show data usage in tiles -->
+    <string name="qs_show_data_usage_title">Показувати використання даних у плитках</string>
+    <string name="qs_show_data_usage_summary">Відображати інформацію про використання даних у плитках швидких налаштувань Wi-Fi та мобільної мережі</string>
 </resources>
