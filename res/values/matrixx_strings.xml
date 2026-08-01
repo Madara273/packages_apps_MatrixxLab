@@ -1799,6 +1799,10 @@ sensors are subject to hardware compatibility. Enabling sensors for ambient disp
     <string name="atmosphereeffect_settings_title">Atmosphere Effect</string>
     <string name="atmosphereeffect_settings_summary">Configure effects and animation settings</string>
 
+    <!-- Screenshots -->
+    <string name="hide_status_bar_in_screenshot_title">Hide status bar in screenshots</string>
+    <string name="hide_status_bar_in_screenshot_summary">Crop the status bar area out of full screenshots</string>
+
     <!-- Statusbar lyric -->
     <string name="status_bar_lyric_title">Status bar lyric</string>
     <string name="status_bar_lyric_summary">Show lyric in status bar (need app support)</string>
