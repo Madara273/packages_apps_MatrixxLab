@@ -56,6 +56,12 @@
             android:title="@string/status_bar_lyric_title"
             android:summary="@string/status_bar_lyric_summary"
             android:fragment="com.matrixx.settings.fragments.statusbar.StatusbarLyricSettings"/>
+
+        <Preference
+            android:key="status_bar_dynamic_island"
+            android:title="@string/status_bar_dynamic_island_title"
+            android:summary="@string/status_bar_dynamic_island_summary"
+            android:fragment="com.matrixx.settings.fragments.statusbar.DynamicIslandSettings" />
 			
         <Preference
             android:key="dynamic_bar"
