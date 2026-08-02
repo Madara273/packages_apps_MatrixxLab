@@ -1576,4 +1576,27 @@
     <!-- Show data usage in tiles -->
     <string name="qs_show_data_usage_title">Показувати використання даних у плитках</string>
     <string name="qs_show_data_usage_summary">Відображати інформацію про використання даних у плитках швидких налаштувань Wi-Fi та мобільної мережі</string>
+    <!-- Dynamic island -->
+    <string name="status_bar_dynamic_island_title">Динамічний острів</string>
+    <string name="status_bar_dynamic_island_summary">Налаштуйте острів та виберіть, які функції відображати</string>
+    <string name="dynamic_island_footer_title">Про Динамічний острів</string>
+    <string name="dynamic_island_intro">Увімкніть Динамічний острів та виберіть функції, які хочете бачити в центрованому елементі.</string>
+    <string name="dynamic_island_features_title">Функції</string>
+    <string name="dynamic_island_media_controls_title">Керування медіа</string>
+    <string name="dynamic_island_media_controls_summary">Показувати елементи відтворення та обкладинку в острові</string>
+    <string name="dynamic_island_screen_recording_title">Запис екрана</string>
+    <string name="dynamic_island_screen_recording_summary">Показувати таймер запису та елементи керування в острові</string>
+    <string name="dynamic_island_alarms_title">Будильники</string>
+    <string name="dynamic_island_alarms_summary">Показувати наступний будильник або сповіщення активного будильника в острові</string>
+    <string name="dynamic_island_flashlight_title">Ліхтарик</string>
+    <string name="dynamic_island_flashlight_summary">Показувати стан ліхтарика в острові, коли він увімкнений</string>
+    <string name="dynamic_island_stopwatch_title">Секундомір</string>
+    <string name="dynamic_island_stopwatch_summary">Показувати перебіг секундоміра та елементи керування в острові</string>
+    <string name="dynamic_island_live_scores_title">Спортивні результати</string>
+    <string name="dynamic_island_live_scores_summary">Показувати поточні результати матчів в острові для додатків, які надсилають відповідні сповіщення</string>
+    <string name="dynamic_island_lyrics_title">Показ тексту пісні</string>
+    <string name="dynamic_island_lyrics_summary">Показувати текст пісні під карткою музики в острові для підтримуваних додатків</string>
+    <string name="dynamic_island_customization_title">Налаштування Динамічного острова</string>
+    <string name="dynamic_island_width_scale_title">Масштаб ширини</string>
+    <string name="dynamic_island_height_scale_title">Масштаб висоти</string>
 </resources>
