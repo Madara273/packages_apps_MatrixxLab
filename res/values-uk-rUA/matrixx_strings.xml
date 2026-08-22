@@ -1560,6 +1560,9 @@
     <string name="doze_peek_title">AOD Peek</string>
     <string name="doze_peek_summary">Коротко показати always-on display при вимкненні екрана</string>
     <string name="doze_peek_duration_title">Тривалість показу</string>
+    <!-- Themes -->
+    <string name="custom_system_theme_title">Магазин тем</string>
+    <string name="custom_system_theme_summary">Налаштування вигляду системи за допомогою тем та пакетів іконок</string>
     <!-- Statusbar lyric -->
     <string name="status_bar_lyric_title">Текст пісні в рядку стану</string>
     <string name="status_bar_lyric_summary">Відображати текст пісні в рядку стану (потрібна підтримка додатком)</string>
