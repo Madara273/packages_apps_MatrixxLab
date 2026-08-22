@@ -49,6 +49,7 @@ public class StatusBar extends SettingsPreferenceFragment implements
     private static final String QUICK_PULLDOWN = "qs_quick_pulldown";
     private static final String LOGO_COLOR = "status_bar_logo_color";
     private static final String LOGO_COLOR_PICKER = "status_bar_logo_color_picker";
+    private static final String DYNAMIC_ISLAND = "status_bar_dynamic_island";
 
     private static final int PULLDOWN_DIR_NONE = 0;
     private static final int PULLDOWN_DIR_RIGHT = 1;
@@ -58,6 +59,7 @@ public class StatusBar extends SettingsPreferenceFragment implements
     private LineageSystemSettingListPreference mQuickPulldown;
     private SystemSettingListPreference mLogoColor;
     private ColorPickerPreference mLogoColorPicker;
+    private Preference mDynamicIsland;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -68,6 +70,11 @@ public class StatusBar extends SettingsPreferenceFragment implements
         final ContentResolver resolver = context.getContentResolver();
         final PreferenceScreen prefScreen = getPreferenceScreen();
         final Resources resources = context.getResources();
+
+        mDynamicIsland = findPreference(DYNAMIC_ISLAND);
+        if (mDynamicIsland != null) {
+            mDynamicIsland.setVisible(DeviceUtils.hasCenteredCutout(context));
+        }
 
         mQuickPulldown =
         (LineageSystemSettingListPreference) findPreference(QUICK_PULLDOWN);
@@ -218,6 +225,10 @@ public class StatusBar extends SettingsPreferenceFragment implements
             public List<String> getNonIndexableKeys(Context context) {
                 List<String> keys = super.getNonIndexableKeys(context);
                 final Resources resources = context.getResources();
+
+                if (!DeviceUtils.hasCenteredCutout(context)) {
+                        keys.add(DYNAMIC_ISLAND);
+                    }
 
                 return keys;
             }
